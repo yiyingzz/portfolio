@@ -61,7 +61,7 @@ a:focus {
         display: flex;
         align-items: center;
         height: 80vh;
-        width: 70%;
+        min-width: 70%;
     }
 
     .img-container {
@@ -70,6 +70,7 @@ a:focus {
 
     a {
         font-size: 4rem;
+        margin: 5px;
     }
 
 }
