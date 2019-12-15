@@ -1,0 +1,42 @@
+.work__project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.work__project-left {
+  flex-direction: row-reverse;
+}
+
+.work__info {
+  width: calc(55% - 20px);
+
+  img {
+    margin-top: 20px;
+    display: block;
+  }
+  p:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.work__images {
+  width: calc(45% - 20px);
+  img {
+    width: 100%;
+  }
+}
+
+.work__project__skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    background: $pink;
+  }
+}

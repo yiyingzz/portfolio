@@ -1,0 +1,59 @@
+header {
+  background-image: url(../assets/header_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+nav {
+  height: 10vh;
+  background: #fff;
+  font-family: $headerFont;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.header__nav {
+  // margin-left: 60%;
+  // width: 40%;
+  text-align: right;
+  justify-content: center;
+
+  li {
+    margin: 20px;
+    position: relative;
+  }
+
+  li::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: $pink;
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    right: 15px;
+  }
+}
+
+.header__content {
+  height: 90vh;
+  align-items: center;
+
+  i {
+    font-size: 5rem;
+    color: $pink;
+    // margin: 0 auto;
+  }
+}
+
+h1,
+h2 {
+  display: block;
+  width: 100%;
+}
+
+.period {
+  color: $pink;
+}

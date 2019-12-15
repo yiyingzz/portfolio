@@ -1,0 +1,30 @@
+.about {
+  height: 100vh;
+  align-items: center;
+}
+
+.about__info {
+  width: calc(55% - 20px);
+}
+
+.about__img {
+  margin-top: 50px;
+  width: calc(45% - 20px);
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.about__img::after {
+  content: "";
+  display: block;
+  border: 8px solid $turquoise;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  left: 40px;
+  bottom: 40px;
+  z-index: -1;
+}

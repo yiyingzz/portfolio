@@ -1,0 +1,27 @@
+.contact {
+  background: $turquoise;
+}
+
+.contact__info {
+  width: calc(40% - 20px);
+}
+
+.contact__social {
+  justify-content: center;
+
+  li {
+    margin: 20px;
+  }
+  i {
+    font-size: 5rem;
+  }
+}
+
+form {
+  width: calc(60% - 20px);
+}
+
+input,
+textarea {
+  width: 100%;
+}
