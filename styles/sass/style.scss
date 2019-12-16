@@ -1,5 +1,6 @@
 @import "./partials/setup";
 @import "./partials/variables";
+@import "./partials/mixins";
 @import "./partials/global";
 @import "./partials/header";
 @import "./partials/about";
@@ -8,6 +9,6 @@
 @import "./partials/contact";
 @import "./partials/footer";
 
-* {
-  border: 1px solid deepskyblue;
-}
+// * {
+//   border: 1px solid deepskyblue;
+// }

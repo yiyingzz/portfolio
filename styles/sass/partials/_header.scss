@@ -5,7 +5,37 @@ header {
   height: 100vh;
 }
 
+.nav__toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+
+  i {
+    font-size: 3rem;
+    color: $secondaryTextColor;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      top: -13px;
+      left: -14px;
+      // bottom: -10px;
+      // right: -12px;
+      border-radius: 50%;
+      background: $turquoise;
+      z-index: -1;
+    }
+  }
+}
+
 nav {
+  display: none;
+
   height: 10vh;
   background: #fff;
   font-family: $headerFont;
@@ -38,20 +68,36 @@ nav {
 }
 
 .header__content {
-  height: 90vh;
+  // width: 70%;
+  height: 100vh;
   align-items: center;
+  justify-content: center;
 
   i {
     font-size: 5rem;
     color: $pink;
-    // margin: 0 auto;
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover,
+    &:focus {
+      color: $turquoise;
+    }
   }
 }
 
 h1,
-h2 {
+h2,
+.header__content i {
   display: block;
-  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.hi {
+  font-size: 5rem;
+  line-height: 0.7;
+  display: block;
 }
 
 .period {

@@ -14,13 +14,18 @@
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:700|Muli&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat:700|Muli:500&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header>
+      <div class="nav__toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
       <nav>
         <ul class="header__nav wrapper flex-container">
           <li><a href="#about">About</a></li>
@@ -29,15 +34,20 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
       <div class="header__content flex-container">
-        <h1>Hi, I'm Yiying<span class="period">.</span></h1>
-        <h2>Front-End Developer</h2>
-        <i class="fas fa-chevron-circle-down"></i>
+        <div class="header__titles">
+          <h1><span class="hi">Hi,</span> I'm Yiying<span class="period">.</span></h1>
+          <h2>Front-End Developer</h2>
+          <i class="fas fa-chevron-circle-down"></i>
+          
+                  </div>
       </div>
     </header>
+
     <main>
       <section id="about" class="about flex-container wrapper">
-        <div class="about__info">
+        <div class="about__info" data-aos="fade-right">
           <h3>About me</h3>
           <p>
             My name is <span>Yiying Zou</span> and I'm a
@@ -62,100 +72,102 @@
             dancing to some 90s tunes.
           </p>
         </div>
-        <div class="about__img">
+        <div class="about__img" data-aos="fade-left">
           <img src="assets/headshot.jpg" alt="Photo of Yiying Zou" />
         </div>
       </section>
+      <!-- /about section-->
+
       <section id="skills" class="skills">
-        <h3 class="skills__title">my toolbox.</h3>
+        <h3 class="skills__title">My Toolbox</h3>
         <ul class="skills__icons">
           <div class="wrapper flex-container">
-            <li>
+            <li data-aos="fade-up">
               <i class="fab fa-html5"></i>
               <p>HTML5</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="fab fa-css3-alt"></i>
               <p>CSS3</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="fab fa-sass"></i>
               <p>Sass</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="fab fa-js"></i>
               <p>JavaScript</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="devicon-jquery-plain"></i>
               <p>jQuery</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="fab fa-react"></i>
               <p>React</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="fas fa-mobile-alt"></i>
               <p>Responsive Design</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="fab fa-github"></i>
               <p>Github</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="fab fa-git-alt"></i>
               <p>Git</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="devicon-visualstudio-plain"></i>
               <p>VS Code</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="fas fa-terminal"></i>
               <p>Command Line</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="devicon-photoshop-plain"></i>
               <p>Adobe Photoshop</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="devicon-photoshop-plain"></i>
               <p>Web Accessibility</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="devicon-photoshop-plain"></i>
               <p>Firebase</p>
             </li>
-            <li>
+            <li data-aos="fade-up">
               <i class="devicon-photoshop-plain"></i>
               <p>Rest API</p>
             </li>
           </div>
         </ul>
       </section>
-      <section id="work">
+      <!-- /skills section -->
+
+      <section id="work" class="work">
         <div class="wrapper">
-          <h3>Things I've made</h3>
+          <h3 data-aos="fade-down">Things I've made</h3>
           <ul class="work__list">
-            <li class="work__project work__project-right">
-              <div class="work__images">
+            <li class="work__project work__project-right flex-container">
+              <div class="work__images" data-aos="fade-right">
                 <img
-                  src="assets/portfolio_img/gif-movie.jpg"
+                  src="assets/portfolio_img/gif-movie.png"
                   alt="Screenshot of 'Gif Me a Movie' desktop website."
                 />
               </div>
-              <div class="work__info">
+              <div class="work__info" data-aos="fade-left">
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Gif Me a Movie.</h4>
                 <p>
-                  Created for people who just don't have the time to sit through
-                  a full movie, this website lets you search for a film and
-                  gives you 3 gifs based on the movie's keywords to give you an
-                  out-of-context overview of the plot & themes. A mock
-                  agency-style group project made with
-                  <a href="#" target="_blank">Andrea Lacson</a>,
-                  <a href="#" target="_blank">Andrew Alexander</a>, and
-                  <a href="#" target="_blank">Vipin Kirthane</a>.
+                  No time to watch a movie? This website gives you 3 gifs
+                  summarizing a film title you search for. A mock agency-style
+                  group project made with
+                  <a href="https://github.com/andrearose26" target="_blank">Andrea Lacson</a>,
+                  <a href="https://github.com/andalexander" target="_blank">Andrew Alexander</a>, and
+                  <a href="https://github.com/VipinKirthane" target="_blank">Vipin Kirthane</a>.
                 </p>
                 <ul class="work__project__skills">
                   <li>React</li>
@@ -166,24 +178,37 @@
                   <li>Group/Mob Programming</li>
                 </ul>
 
-                <button>View Live</button>
-                <button>View on Github</button>
+                <a
+                  href="https://team-outofcontext.github.io/movieSpoilerProjectSix/"
+                  target="_blank"
+                  ><button>Visit</button></a
+                >
+                <a
+                  href="https://github.com/Team-OutOfContext/movieSpoilerProjectSix"
+                  target="_blank"
+                >
+                  <button>Github</button>
+                </a>
               </div>
+              <img src="assets/lines.jpg" alt="" class="work__divider" />
             </li>
-            <li class="work__project work__project-left">
-              <div class="work__images">
+            <li class="work__project work__project-left flex-container">
+              <div class="work__images" data-aos="fade-left">
                 <img
-                  src="assets/portfolio_img/food-flick.jpg"
+                  src="assets/portfolio_img/food-flick.png"
                   alt="Screenshot of 'Food & A Flick' desktop website."
                 />
               </div>
-              <div class="work__info">
+              <div class="work__info" data-aos="fade-right">
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Food & A Flick.</h4>
                 <p>
-                  A date-planning app for romantic night in. Users can search
-                  for a recipe and a movie. A pair programming project with
-                  <a href="#" target="_blank">Keil Martin</a>.
+                  Impress your date with this date-planning app for a classy
+                  night in. Users can search for a recipe and a movie. A pair
+                  programming project with
+                  <a href="https://github.com/keilmart" target="_blank"
+                    >Keil Martin</a
+                  >.
                 </p>
                 <ul class="work__project__skills">
                   <li>API</li>
@@ -195,21 +220,35 @@
                   <li>Pair Programming</li>
                 </ul>
 
-                <button>View Live</button>
-                <button>View on Github</button>
+                <a
+                  href="https://keil-yiying.github.io/foodAndAFlick/"
+                  target="_blank"
+                  ><button>Visit</button></a
+                >
+                <a
+                  href="https://github.com/Keil-Yiying/foodAndAFlick"
+                  target="_blank"
+                >
+                  <button>Github</button>
+                </a>
               </div>
+              <img src="assets/lines.jpg" alt="" class="work__divider" />
             </li>
-            <li class="work__project work__project-right">
-              <div class="work__images">
+            <li class="work__project work__project-right flex-container">
+              <div class="work__images" data-aos="fade-right">
                 <img
-                  src="assets/portfolio_img/yiying-yells.jpg"
+                  src="assets/portfolio_img/yiying-yells.png"
                   alt="Screenshot of 'Yiying Yells' desktop website."
                 />
               </div>
-              <div class="work__info">
+              <div class="work__info" data-aos="fade-left">
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Yiying Yells (Gently).</h4>
-                <p>A Simon Says-style memory game.</p>
+                <p>
+                  Test your memory with my Simon Says-style game where you watch
+                  a sequence of blocks light up and then click them in the right
+                  order.
+                </p>
                 <ul class="work__project__skills">
                   <li>JavaScript</li>
                   <li>jQuery</li>
@@ -218,42 +257,29 @@
                   <li>HTML5</li>
                 </ul>
 
-                <button>View Live</button>
-                <button>View on Github</button>
+                <a
+                  href="https://yiyingzz.github.io/yiyingZouProjectThree/"
+                  target="_blank"
+                  ><button>Visit</button></a
+                >
+                <a
+                  href="https://github.com/yiyingzz/yiyingZouProjectThree"
+                  target="_blank"
+                >
+                  <button>Github</button>
+                </a>
               </div>
+              <img src="assets/lines.jpg" alt="" class="work__divider" />
             </li>
-            <li class="work__project work__project-left">
-              <div class="work__images">
-                <img
-                  src="assets/portfolio_img/textilee.jpg"
-                  alt="Screenshot of 'Textilee' desktop website."
-                />
-              </div>
-              <div class="work__info">
-                <img src="assets/lines.jpg" alt="" />
-                <h4>Textilee.</h4>
-                <p>
-                  A fully responsive multi-page PSD conversion for a textiles
-                  website using CSS Flexbox.
-                </p>
-                <ul class="work__project__skills">
-                  <li>Sass</li>
-                  <li>CSS3</li>
-                  <li>HTML5</li>
-                </ul>
 
-                <button>View Live</button>
-                <button>View on Github</button>
-              </div>
-            </li>
-            <li class="work__project work__project-right">
-              <div class="work__images">
+            <li class="work__project work__project-left flex-container">
+              <div class="work__images" data-aos="fade-left">
                 <img
-                  src="assets/portfolio_img/going-dutch.jpg"
+                  src="assets/portfolio_img/going-dutch.png"
                   alt="Screenshot of 'Going Dutch' desktop website."
                 />
               </div>
-              <div class="work__info">
+              <div class="work__info" data-aos="fade-right">
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Going Dutch.</h4>
                 <p>
@@ -261,26 +287,69 @@
                   stored in Firebase.
                 </p>
                 <ul class="work__project__skills">
+                  <li>React</li>
+                  <li>Firebase</li>
+                  <li>CSS3</li>
+                  <li>Sass</li>
+                  <li>HTML5</li>
+                </ul>
+
+                <a href="https://yiyingzz.github.io/goingDutch/" target="_blank"
+                  ><button>Visit</button></a
+                >
+                <a
+                  href="https://github.com/yiyingzz/goingDutch"
+                  target="_blank"
+                >
+                  <button>Github</button></a
+                >
+              </div>
+              <img src="assets/lines.jpg" alt="" class="work__divider" />
+            </li>
+
+            <li class="work__project work__project-right flex-container">
+              <div class="work__images" data-aos="fade-right">
+                <img
+                  src="assets/portfolio_img/textilee.png"
+                  alt="Screenshot of 'Textilee' desktop website."
+                />
+              </div>
+              <div class="work__info" data-aos="fade-left">
+                <img src="assets/lines.jpg" alt="" />
+                <h4>Textilee.</h4>
+                <p>
+                  A fully responsive multi-page PSD conversion for a textiles
+                  website using CSS Flexbox.
+                </p>
+                <ul class="work__project__skills">
                   <li>HTML5</li>
                   <li>CSS3</li>
                   <li>Sass</li>
-                  <li>React</li>
-                  <li>Firebase</li>
                 </ul>
 
-                <button>View Live</button>
-                <button>View on Github</button>
+                <a
+                  href="https://yiyingzz.github.io/yiying-zou-project-two/"
+                  target="_blank"
+                  ><button>Visit</button></a
+                >
+                <a
+                  href="https://github.com/yiyingzz/yiying-zou-project-two"
+                  target="_blank"
+                >
+                  <button>Github</button>
+                </a>
               </div>
             </li>
           </ul>
         </div>
       </section>
+      <!-- /work section -->
 
       <section id="contact" class="contact">
         <div class="wrapper flex-container">
-          <div class="contact__info">
+          <div class="contact__info" data-aos="fade-right">
             <h3>Get in touch</h3>
-            <p>Blurb</p>
+            <p>Want to work together? I'd love to hear from you!</p>
             <ul class="flex-container contact__social">
               <li>
                 <a href="https://www.linkedin.com/in/yzou/" target="_blank"
@@ -299,7 +368,7 @@
               </li>
             </ul>
           </div>
-          <form action="#" method="#" class="flex-container">
+          <form action="#" method="#" class="flex-container" data-aos="fade-left">
             <label for="name" class="visually-hidden">Name</label>
             <input type="text" id="name" placeholder="name" />
             <label for="email" class="visually-hidden">Email</label>
@@ -310,14 +379,19 @@
           </form>
         </div>
       </section>
+      <!-- /contact section -->
     </main>
+
     <footer>
       <div class="wrapper">
         <p>
-          &copy; Yiying Zou 2019. Designed by -- on Themeforest. Photo by Fatima
-          Gueye.
+          Coded by Yiying Zou 2019. Designed by <a href="https://themeforest.net/user/vlthemes" target="_blank">VLThemes</a>. Photo by <a href="https://fgueye.com" target=_blank">Fatima Gueye</a>.
         </p>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,5 @@
+@mixin mq-980 {
+  @media (max-width: 980px) {
+    @content;
+  }
+}

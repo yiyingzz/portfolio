@@ -4,8 +4,14 @@ $headerFont: "Montserrat", sans-serif;
 
 // COLOURS
 $lightGrey: #f5f5f5;
+$darkGrey: #333;
+$black: #000;
+$white: #fff;
 $pink: #ee3364;
 $yellow: #fdf4b4;
 $turquoise: #00b7be;
 
-// $primaryTextColor: ;
+$primaryTextColor: $darkGrey;
+$secondaryTextColor: $white;
+
+$primaryTitleColor: $black;

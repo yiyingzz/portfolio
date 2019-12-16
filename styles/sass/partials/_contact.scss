@@ -1,9 +1,20 @@
 .contact {
   background: $turquoise;
+  color: $secondaryTextColor;
+  padding: 50px 0;
 }
 
 .contact__info {
   width: calc(40% - 20px);
+  align-self: flex-start;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
+  h3 {
+    margin-top: 15px;
+  }
 }
 
 .contact__social {
@@ -12,16 +23,33 @@
   li {
     margin: 20px;
   }
+
   i {
     font-size: 5rem;
+    transition: 0.3s all;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
   }
 }
 
 form {
   width: calc(60% - 20px);
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
+  button {
+    margin: 15px auto;
+  }
 }
 
 input,
 textarea {
   width: 100%;
+  margin: 15px 0;
+  padding: 15px;
 }

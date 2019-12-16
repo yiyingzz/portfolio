@@ -1,19 +1,38 @@
 .about {
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
 }
 
 .about__info {
   width: calc(55% - 20px);
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+
+  span {
+    color: $pink;
+  }
 }
 
 .about__img {
-  margin-top: 50px;
-  width: calc(45% - 20px);
+  margin: 50px 38px 0 0;
+  width: calc(45% - 80px);
   position: relative;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    order: -1;
+  }
 
   img {
     width: 100%;
+
+    @media (max-width: 800px) {
+      height: 400px;
+      object-fit: cover;
+      object-position: top center;
+    }
   }
 }
 
