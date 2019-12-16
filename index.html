@@ -22,9 +22,12 @@
   </head>
   <body>
     <header>
-      <div class="nav__toggle">
-        <i class="fas fa-bars"></i>
-      </div>
+      <!-- <label for="nav-toggle"> -->
+        <div class="nav__toggle" tabindex="0">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </div>
+      <!-- </label> -->
+      <!-- <input type="checkbox" id="nav-toggle"> -->
 
       <nav>
         <ul class="header__nav wrapper flex-container">
@@ -39,11 +42,15 @@
         <div class="header__titles">
           <h1><span class="hi">Hi,</span> I'm Yiying<span class="period">.</span></h1>
           <h2>Front-End Developer</h2>
-          <i class="fas fa-chevron-circle-down"></i>
+
+          <div class="scroll-down">
+            <i class="fas fa-chevron-circle-down scroll-down__icon slide-bottom"></i>
+          </div>
           
-                  </div>
+        </div>
       </div>
     </header>
+
 
     <main>
       <section id="about" class="about flex-container wrapper">
@@ -80,70 +87,58 @@
 
       <section id="skills" class="skills">
         <h3 class="skills__title">My Toolbox</h3>
-        <ul class="skills__icons">
-          <div class="wrapper flex-container">
+        <div class="skills__bg">
+          <ul class="skills__icons wrapper flex-container">
             <li data-aos="fade-up">
-              <i class="fab fa-html5"></i>
+              <i class="fab fa-html5" aria-hidden="true"></i>
               <p>HTML5</p>
             </li>
             <li data-aos="fade-up">
-              <i class="fab fa-css3-alt"></i>
+              <i class="fab fa-css3-alt" aria-hidden="true"></i>
               <p>CSS3</p>
             </li>
             <li data-aos="fade-up">
-              <i class="fab fa-sass"></i>
+              <i class="fab fa-sass" aria-hidden="true"></i>
               <p>Sass</p>
             </li>
             <li data-aos="fade-up">
-              <i class="fab fa-js"></i>
+              <i class="fab fa-js" aria-hidden="true"></i>
               <p>JavaScript</p>
             </li>
             <li data-aos="fade-up">
-              <i class="devicon-jquery-plain"></i>
+              <i class="devicon-jquery-plain" aria-hidden="true"></i>
               <p>jQuery</p>
             </li>
             <li data-aos="fade-up">
-              <i class="fab fa-react"></i>
+              <i class="fab fa-react" aria-hidden="true"></i>
               <p>React</p>
             </li>
             <li data-aos="fade-up">
-              <i class="fas fa-mobile-alt"></i>
-              <p>Responsive Design</p>
-            </li>
-            <li data-aos="fade-up">
-              <i class="fab fa-github"></i>
-              <p>Github</p>
-            </li>
-            <li data-aos="fade-up">
-              <i class="fab fa-git-alt"></i>
+              <i class="fab fa-git-alt" aria-hidden="true"></i>
               <p>Git</p>
             </li>
             <li data-aos="fade-up">
-              <i class="devicon-visualstudio-plain"></i>
-              <p>VS Code</p>
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <p>Github</p>
             </li>
             <li data-aos="fade-up">
-              <i class="fas fa-terminal"></i>
-              <p>Command Line</p>
-            </li>
-            <li data-aos="fade-up">
-              <i class="devicon-photoshop-plain"></i>
+              <i class="devicon-photoshop-plain" aria-hidden="true"></i>
               <p>Adobe Photoshop</p>
             </li>
             <li data-aos="fade-up">
-              <i class="devicon-photoshop-plain"></i>
-              <p>Web Accessibility</p>
-            </li>
-            <li data-aos="fade-up">
-              <i class="devicon-photoshop-plain"></i>
+              <i class="fas fa-fire-alt" aria-hidden="true"></i>
               <p>Firebase</p>
             </li>
             <li data-aos="fade-up">
-              <i class="devicon-photoshop-plain"></i>
-              <p>Rest API</p>
+              <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+              <p>Responsive Design</p>
             </li>
+            <li data-aos="fade-up">
+              <i class="fas fa-universal-access" aria-hidden="true"></i>
+              <p>Web Accessibility</p>
+            </li>
+          </ul>
           </div>
-        </ul>
       </section>
       <!-- /skills section -->
 
@@ -190,7 +185,9 @@
                   <button>Github</button>
                 </a>
               </div>
-              <img src="assets/lines.jpg" alt="" class="work__divider" />
+              <div class="work__divider">
+                <img src="assets/lines.jpg" alt="" />
+              </div>
             </li>
             <li class="work__project work__project-left flex-container">
               <div class="work__images" data-aos="fade-left">
@@ -232,7 +229,9 @@
                   <button>Github</button>
                 </a>
               </div>
-              <img src="assets/lines.jpg" alt="" class="work__divider" />
+              <div class="work__divider">
+                <img src="assets/lines.jpg" alt="" />
+              </div>
             </li>
             <li class="work__project work__project-right flex-container">
               <div class="work__images" data-aos="fade-right">
@@ -269,7 +268,9 @@
                   <button>Github</button>
                 </a>
               </div>
-              <img src="assets/lines.jpg" alt="" class="work__divider" />
+              <div class="work__divider">
+                <img src="assets/lines.jpg" alt="" />
+              </div>
             </li>
 
             <li class="work__project work__project-left flex-container">
@@ -304,7 +305,9 @@
                   <button>Github</button></a
                 >
               </div>
-              <img src="assets/lines.jpg" alt="" class="work__divider" />
+              <div class="work__divider">
+                <img src="assets/lines.jpg" alt="" />
+              </div>
             </li>
 
             <li class="work__project work__project-right flex-container">
@@ -353,26 +356,26 @@
             <ul class="flex-container contact__social">
               <li>
                 <a href="https://www.linkedin.com/in/yzou/" target="_blank"
-                  ><i class="fab fa-linkedin"></i
+                  ><i class="fab fa-linkedin" aria-hidden="true"></i
                 ></a>
               </li>
               <li>
                 <a href="https://www.github.com/yiyingzz/" target="_blank"
-                  ><i class="fab fa-github"></i
+                  ><i class="fab fa-github" aria-hidden="true"></i
                 ></a>
               </li>
               <li>
                 <a href="https://www.twitter.com/yiyingzz" target="_blank"
-                  ><i class="fab fa-twitter"></i
+                  ><span class="visually-hidden">go to twitter</span><i class="fab fa-twitter" aria-hidden="true"></i
                 ></a>
               </li>
             </ul>
           </div>
-          <form action="#" method="#" class="flex-container" data-aos="fade-left">
+          <form action="https://formspree.io/myykgvoa" method="POST" class="flex-container" data-aos="fade-left">
             <label for="name" class="visually-hidden">Name</label>
             <input type="text" id="name" placeholder="name" />
             <label for="email" class="visually-hidden">Email</label>
-            <input type="email" placeholder="email address" />
+            <input type="email" id="email" placeholder="email address" />
             <label for="message" class="visually-hidden">Message</label>
             <textarea id="message" placeholder="message"></textarea>
             <button type="submit">Submit</button>
