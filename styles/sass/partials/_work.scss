@@ -11,7 +11,7 @@
 .work__project {
   margin: 120px 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: 769px) {
     margin: 0;
 
     &:last-of-type {
@@ -24,7 +24,7 @@
   }
 }
 
-.work__project-left {
+.work__project-right {
   flex-direction: row-reverse;
 }
 
@@ -36,7 +36,7 @@
     width: 60%;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 769px) {
     width: 100%;
   }
 
@@ -47,7 +47,7 @@
   img {
     display: block;
 
-    @media (max-width: 767px) {
+    @media (max-width: 769px) {
       display: none;
     }
   }
@@ -59,8 +59,8 @@
   button {
     margin-right: 10px;
 
-    @media (max-width: 767px) {
-      text-align: center;
+    @media (max-width: 769px) {
+      // text-align: center;
     }
 
     @media (max-width: 480px) {
@@ -76,7 +76,7 @@
     width: 40%;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 769px) {
     width: 100%;
   }
 
@@ -131,7 +131,7 @@
   display: none;
   text-align: center;
 
-  @media (max-width: 767px) {
+  @media (max-width: 769px) {
     display: block;
     margin: 60px 0;
     width: 100%;
