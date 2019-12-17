@@ -1010,6 +1010,18 @@ nav ul li {
   margin: 20px;
 }
 
+@media (max-width: 900px) {
+  .contact__social li {
+    margin: 20px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact__social li {
+    margin: 20px;
+  }
+}
+
 .contact__social i {
   font-size: 5rem;
   -webkit-transition: 0.3s all;
@@ -1028,6 +1040,18 @@ nav ul li {
           filter: none;
   top: 5px;
   left: 5px;
+}
+
+@media (max-width: 900px) {
+  .contact__social i {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact__social i {
+    font-size: 5rem;
+  }
 }
 
 form {
