@@ -44,7 +44,7 @@
 
 .skills__icons {
   position: relative;
-  top: -40px;
+  top: -50px;
 }
 
 .skills__bg {
@@ -88,17 +88,8 @@
 
   p {
     margin: 10px 0 0;
-    opacity: 0;
-    position: relative;
-    top: 8px;
     font-size: 1.4rem;
     text-transform: uppercase;
-    transition: 0.3s all;
-
-    @media (max-width: 767px) {
-      opacity: 1;
-      top: 0;
-    }
   }
 
   i {
@@ -110,8 +101,8 @@
       color: $accentColor;
     }
 
-    &:hover ~ p,
-    &:focus ~ p {
+    &:hover + p,
+    &:focus + p {
       opacity: 1;
       top: 0;
       color: $accentColor;

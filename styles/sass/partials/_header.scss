@@ -146,10 +146,10 @@ nav {
   display: none;
   opacity: 0.95;
   height: 100vh;
-  width: 70%;
+  width: 100%;
 
   position: fixed;
-  right: -70%;
+  right: -100%;
   transition: 0.3s all;
 
   background: $accentColor;
@@ -160,21 +160,13 @@ nav {
 
   z-index: 2;
 
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-
   &.open {
     right: 0;
     transition: 0.3s all;
   }
 
   &.closed {
-    right: -70%;
-
-    @media (max-width: 600px) {
-      right: -100%;
-    }
+    right: -100%;
   }
 }
 
