@@ -1,6 +1,7 @@
 .work {
   h3 {
     text-align: center;
+    color: $secondaryColor;
   }
 }
 .work__project {
@@ -28,11 +29,10 @@
   padding: 0 20px;
 
   @media (max-width: 980px) {
-    // width: calc(60% - 20px);
     width: 60%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 767px) {
     width: 100%;
   }
 
@@ -41,7 +41,6 @@
   }
 
   img {
-    // margin-top: 20px;
     display: block;
 
     @media (max-width: 767px) {
@@ -70,11 +69,10 @@
   width: calc(50% - 20px);
 
   @media (max-width: 980px) {
-    // width: calc(40% - 20px);
     width: 40%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 767px) {
     width: 100%;
   }
 
@@ -88,16 +86,40 @@
 
   li {
     display: inline-block;
-    // text-transform: uppercase;
     font-size: 1.5rem;
     letter-spacing: 1.2px;
     margin: 0 10px 10px 0;
     padding: 5px 6px;
-    background: $yellow;
+    background: $accentColor;
 
     @media (max-width: 480px) {
       text-align: center;
     }
+  }
+}
+
+.work__link {
+  display: inline-block;
+  background-color: $primaryColor;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-family: $headerFont;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: $secondaryTextColor;
+  box-shadow: 5px 5px 0 $accentColor;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: 0.3s all;
+
+  &:hover,
+  &:focus {
+    color: $secondaryTextColor;
+    background-color: $secondaryColor;
+    box-shadow: none;
+    top: 5px;
+    left: 5px;
   }
 }
 

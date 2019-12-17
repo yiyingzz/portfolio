@@ -1,5 +1,5 @@
 .contact {
-  background: $turquoise;
+  background: $secondaryColor;
   color: $secondaryTextColor;
   padding: 50px 0;
 }
@@ -14,7 +14,6 @@
 
   h3 {
     margin-top: 15px;
-    color: $secondaryTextColor;
   }
 }
 
@@ -28,10 +27,18 @@
   i {
     font-size: 5rem;
     transition: 0.3s all;
+    color: $accentColor;
+    position: relative;
+    top: 0;
+    left: 0;
+    filter: drop-shadow(5px 5px 0 $primaryColor);
 
     &:hover,
     &:focus {
-      color: $white;
+      color: $primaryColor;
+      filter: none;
+      top: 5px;
+      left: 5px;
     }
   }
 }
@@ -45,6 +52,28 @@ form {
 
   button {
     margin: 15px auto;
+
+    background-color: $primaryColor;
+    padding: 10px 20px;
+    border: 0;
+    font-family: $headerFont;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: $secondaryTextColor;
+    box-shadow: 5px 5px 0 $accentColor;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.3s all;
+
+    &:hover,
+    &:focus {
+      color: $secondaryColor;
+      background-color: $accentColor;
+      box-shadow: none;
+      top: 5px;
+      left: 5px;
+    }
   }
 }
 
@@ -53,10 +82,10 @@ textarea {
   width: 100%;
   margin: 15px 0;
   padding: 15px;
-  border: 3px solid $turquoise;
+  border: 3px solid $secondaryColor;
 
   &:hover,
   &:focus {
-    border: 3px solid $pink;
+    border: 3px solid $primaryColor;
   }
 }

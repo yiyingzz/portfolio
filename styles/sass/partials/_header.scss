@@ -35,7 +35,7 @@ h2,
 }
 
 .period {
-  color: $pink;
+  color: $primaryColor;
 }
 
 // NAVIGATION MENU
@@ -49,7 +49,7 @@ h2,
 
   i {
     font-size: 3rem;
-    color: $secondaryTextColor;
+    color: $accentColor;
     position: relative;
 
     &::after {
@@ -61,18 +61,26 @@ h2,
       top: -13px;
       left: -14px;
       border-radius: 50%;
-      background: $turquoise;
+      background-color: $secondaryColor;
       z-index: -1;
+      transition: 0.3s all;
     }
+  }
+
+  &:hover > i::after,
+  &:focus > i::after {
+    background-color: $primaryColor;
   }
 }
 
 .nav-visible {
+  display: block;
   top: 0;
 }
 
 nav {
-  opacity: 0.9;
+  display: none;
+  opacity: 0.95;
   height: 100vh;
   position: fixed;
   top: -100%;
@@ -80,7 +88,7 @@ nav {
   right: 0;
   transition: 0.2s all;
 
-  background: $yellow;
+  background: $accentColor;
   font-family: $headerFont;
   text-transform: uppercase;
   font-weight: bold;
@@ -96,6 +104,11 @@ nav ul {
   height: 100vh;
   font-size: 4rem;
 
+  @media (max-width: 650px) {
+    font-size: 3rem;
+    padding: 50px 30px;
+  }
+
   a {
     padding: 20px 40px;
   }
@@ -107,31 +120,29 @@ nav ul {
 }
 
 // animation for scroll down icon
-
 .scroll-down {
   cursor: pointer;
-  border: 1px solid pink;
   position: absolute;
   left: 50%;
   bottom: 10px;
   padding-bottom: 50px;
   transform: translate(-50%, 0);
+
+  &:hover > .scroll-down__icon,
+  &:focus > .scroll-down__icon {
+    color: $secondaryColor;
+  }
 }
 
 .scroll-down__icon {
   font-size: 5rem;
-  color: $pink;
+  color: $primaryColor;
   transition: 0.3s all;
-
-  &:hover,
-  &:focus {
-    color: $turquoise;
-  }
 }
 
 .slide-bottom {
-  -webkit-animation: slide-bottom 0.8s ease-in 0.3s infinite;
-  animation: slide-bottom 0.8s ease-in 0.3s infinite;
+  -webkit-animation: slide-bottom 1s ease-in 0.3s infinite;
+  animation: slide-bottom 1s ease-in 0.3s infinite;
 }
 
 /* ----------------------------------------------
@@ -147,21 +158,23 @@ nav ul {
  * ----------------------------------------
  */
 @-webkit-keyframes slide-bottom {
-  0% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-  100% {
+  50% {
     -webkit-transform: translateY(0);
     transform: translateY(50px);
   }
 }
 @keyframes slide-bottom {
-  0% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-  100% {
+  50% {
     -webkit-transform: translateY(0);
     transform: translateY(50px);
   }

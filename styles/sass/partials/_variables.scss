@@ -3,15 +3,17 @@ $bodyFont: "Muli", sans-serif;
 $headerFont: "Montserrat", sans-serif;
 
 // COLOURS
-$lightGrey: #777;
 $darkGrey: #333;
+$pink: #e02255;
+$yellow: #fdf4b4;
+$darkBlue: #0074b8;
 $black: #000;
 $white: #fff;
-$pink: #ee3364;
-$yellow: #fdf4b4;
-$turquoise: #00b7be;
 
-$primaryTextColor: $darkGrey;
+$primaryTextColor: $black;
 $secondaryTextColor: $white;
+// $tertiaryTextColor: $black;
 
-$primaryTitleColor: $black;
+$primaryColor: $pink;
+$secondaryColor: $darkBlue;
+$accentColor: $yellow;

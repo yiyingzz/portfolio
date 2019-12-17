@@ -1,17 +1,22 @@
 .about {
   min-height: 100vh;
   align-items: center;
+  margin-bottom: 50px;
+
+  h3 {
+    color: $primaryColor;
+  }
 }
 
 .about__info {
   width: calc(55% - 20px);
 
-  @media (max-width: 800px) {
+  @media (max-width: 767px) {
     width: 100%;
   }
 
   span {
-    color: $pink;
+    color: $secondaryColor;
   }
 }
 
@@ -20,7 +25,8 @@
   width: calc(45% - 80px);
   position: relative;
 
-  @media (max-width: 800px) {
+  @media (max-width: 767px) {
+    margin-top: 100px;
     width: 100%;
     order: -1;
   }
@@ -28,7 +34,7 @@
   img {
     width: 100%;
 
-    @media (max-width: 800px) {
+    @media (max-width: 767px) {
       height: 400px;
       object-fit: cover;
       object-position: top center;
@@ -39,7 +45,7 @@
 .about__img::after {
   content: "";
   display: block;
-  border: 8px solid $turquoise;
+  border: 8px solid $primaryColor;
   position: absolute;
   top: -40px;
   right: -40px;

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Portfolio site for front-end web developer Yiying Zou"
+    />
     <title>Yiying Zou | Front-End Web Developer</title>
     <script
       src="https://kit.fontawesome.com/31c9dfb07b.js"
@@ -17,17 +21,15 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:700|Muli:500&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header>
-      <!-- <label for="nav-toggle"> -->
-        <div class="nav__toggle" tabindex="0">
-          <i class="fas fa-bars" aria-hidden="true"></i>
-        </div>
-      <!-- </label> -->
-      <!-- <input type="checkbox" id="nav-toggle"> -->
+      <button class="nav__toggle">
+        <span class="visually-hidden">Click to toggle navigation menu</span>
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
 
       <nav>
         <ul class="header__nav wrapper flex-container">
@@ -40,21 +42,23 @@
 
       <div class="header__content flex-container">
         <div class="header__titles">
-          <h1><span class="hi">Hi,</span> I'm Yiying<span class="period">.</span></h1>
+          <h1>
+            <span class="hi">Hi,</span> I'm Yiying<span class="period">.</span>
+          </h1>
           <h2>Front-End Developer</h2>
 
-          <div class="scroll-down">
-            <i class="fas fa-chevron-circle-down scroll-down__icon slide-bottom"></i>
+          <div class="scroll-down" tabindex="0">
+            <i
+              class="fas fa-chevron-circle-down scroll-down__icon slide-bottom"
+            ></i>
           </div>
-          
         </div>
       </div>
     </header>
 
-
     <main>
       <section id="about" class="about flex-container wrapper">
-        <div class="about__info" data-aos="fade-right">
+        <div class="about__info aos-init aos-animate" data-aos="fade-right">
           <h3>About me</h3>
           <p>
             My name is <span>Yiying Zou</span> and I'm a
@@ -79,90 +83,95 @@
             dancing to some 90s tunes.
           </p>
         </div>
-        <div class="about__img" data-aos="fade-left">
+        <div class="about__img aos-init aos-animate" data-aos="fade-left">
           <img src="assets/headshot.jpg" alt="Photo of Yiying Zou" />
         </div>
       </section>
       <!-- /about section-->
 
       <section id="skills" class="skills">
-        <h3 class="skills__title">My Toolbox</h3>
+        <h3 class="skills__title wrapper">My Toolbox</h3>
         <div class="skills__bg">
           <ul class="skills__icons wrapper flex-container">
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fab fa-html5" aria-hidden="true"></i>
               <p>HTML5</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fab fa-css3-alt" aria-hidden="true"></i>
               <p>CSS3</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fab fa-sass" aria-hidden="true"></i>
               <p>Sass</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fab fa-js" aria-hidden="true"></i>
               <p>JavaScript</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="devicon-jquery-plain" aria-hidden="true"></i>
               <p>jQuery</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fab fa-react" aria-hidden="true"></i>
               <p>React</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fab fa-git-alt" aria-hidden="true"></i>
               <p>Git</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fab fa-github" aria-hidden="true"></i>
               <p>Github</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="devicon-photoshop-plain" aria-hidden="true"></i>
               <p>Adobe Photoshop</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fas fa-fire-alt" aria-hidden="true"></i>
               <p>Firebase</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fas fa-mobile-alt" aria-hidden="true"></i>
               <p>Responsive Design</p>
             </li>
-            <li data-aos="fade-up">
+            <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fas fa-universal-access" aria-hidden="true"></i>
               <p>Web Accessibility</p>
             </li>
           </ul>
-          </div>
+        </div>
       </section>
       <!-- /skills section -->
 
       <section id="work" class="work">
         <div class="wrapper">
-          <h3 data-aos="fade-down">Things I've made</h3>
+          <h3 class="aos-init aos-animate" data-aos="fade-down">
+            Things I've made
+          </h3>
           <ul class="work__list">
             <li class="work__project work__project-right flex-container">
-              <div class="work__images" data-aos="fade-right">
+              <div
+                class="work__images aos-init aos-animate"
+                data-aos="fade-right"
+              >
                 <img
                   src="assets/portfolio_img/gif-movie.png"
                   alt="Screenshot of 'Gif Me a Movie' desktop website."
                 />
               </div>
-              <div class="work__info" data-aos="fade-left">
+              <div class="work__info aos-init aos-animate" data-aos="fade-left">
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Gif Me a Movie.</h4>
                 <p>
                   No time to watch a movie? This website gives you 3 gifs
                   summarizing a film title you search for. A mock agency-style
                   group project made with
-                  <a href="https://github.com/andrearose26" target="_blank">Andrea Lacson</a>,
-                  <a href="https://github.com/andalexander" target="_blank">Andrew Alexander</a>, and
-                  <a href="https://github.com/VipinKirthane" target="_blank">Vipin Kirthane</a>.
+                  <a href="https://andrealacson.com">Andrea Lacson</a>,
+                  <a href="https://andrewknows.codes">Andrew Alexander</a>, and
+                  <a href="https://vipinkirthane.com">Vipin Kirthane</a>.
                 </p>
                 <ul class="work__project__skills">
                   <li>React</li>
@@ -175,14 +184,13 @@
 
                 <a
                   href="https://team-outofcontext.github.io/movieSpoilerProjectSix/"
-                  target="_blank"
-                  ><button>Visit</button></a
+                  class="work__link"
+                  >Visit</a
                 >
                 <a
                   href="https://github.com/Team-OutOfContext/movieSpoilerProjectSix"
-                  target="_blank"
-                >
-                  <button>Github</button>
+                  class="work__link"
+                  >Github
                 </a>
               </div>
               <div class="work__divider">
@@ -190,13 +198,19 @@
               </div>
             </li>
             <li class="work__project work__project-left flex-container">
-              <div class="work__images" data-aos="fade-left">
+              <div
+                class="work__images aos-init aos-animate"
+                data-aos="fade-left"
+              >
                 <img
                   src="assets/portfolio_img/food-flick.png"
                   alt="Screenshot of 'Food & A Flick' desktop website."
                 />
               </div>
-              <div class="work__info" data-aos="fade-right">
+              <div
+                class="work__info aos-init aos-animate"
+                data-aos="fade-right"
+              >
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Food & A Flick.</h4>
                 <p>
@@ -219,28 +233,30 @@
 
                 <a
                   href="https://keil-yiying.github.io/foodAndAFlick/"
-                  target="_blank"
-                  ><button>Visit</button></a
+                  class="work__link"
+                  >Visit</a
                 >
                 <a
                   href="https://github.com/Keil-Yiying/foodAndAFlick"
-                  target="_blank"
+                  class="work__link"
+                  >Github</a
                 >
-                  <button>Github</button>
-                </a>
               </div>
               <div class="work__divider">
                 <img src="assets/lines.jpg" alt="" />
               </div>
             </li>
             <li class="work__project work__project-right flex-container">
-              <div class="work__images" data-aos="fade-right">
+              <div
+                class="work__images aos-init aos-animate"
+                data-aos="fade-right"
+              >
                 <img
                   src="assets/portfolio_img/yiying-yells.png"
                   alt="Screenshot of 'Yiying Yells' desktop website."
                 />
               </div>
-              <div class="work__info" data-aos="fade-left">
+              <div class="work__info aos-init aos-animate" data-aos="fade-left">
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Yiying Yells (Gently).</h4>
                 <p>
@@ -258,14 +274,13 @@
 
                 <a
                   href="https://yiyingzz.github.io/yiyingZouProjectThree/"
-                  target="_blank"
-                  ><button>Visit</button></a
+                  class="work__link"
+                  >Visit</a
                 >
                 <a
                   href="https://github.com/yiyingzz/yiyingZouProjectThree"
-                  target="_blank"
-                >
-                  <button>Github</button>
+                  class="work__link"
+                  >Github
                 </a>
               </div>
               <div class="work__divider">
@@ -274,13 +289,19 @@
             </li>
 
             <li class="work__project work__project-left flex-container">
-              <div class="work__images" data-aos="fade-left">
+              <div
+                class="work__images aos-init aos-animate"
+                data-aos="fade-left"
+              >
                 <img
                   src="assets/portfolio_img/going-dutch.png"
                   alt="Screenshot of 'Going Dutch' desktop website."
                 />
               </div>
-              <div class="work__info" data-aos="fade-right">
+              <div
+                class="work__info aos-init aos-animate"
+                data-aos="fade-right"
+              >
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Going Dutch.</h4>
                 <p>
@@ -295,14 +316,15 @@
                   <li>HTML5</li>
                 </ul>
 
-                <a href="https://yiyingzz.github.io/goingDutch/" target="_blank"
-                  ><button>Visit</button></a
+                <a
+                  href="https://yiyingzz.github.io/goingDutch/"
+                  class="work__link"
+                  >Visit</a
                 >
                 <a
                   href="https://github.com/yiyingzz/goingDutch"
-                  target="_blank"
-                >
-                  <button>Github</button></a
+                  class="work__link"
+                  >Github</a
                 >
               </div>
               <div class="work__divider">
@@ -311,13 +333,16 @@
             </li>
 
             <li class="work__project work__project-right flex-container">
-              <div class="work__images" data-aos="fade-right">
+              <div
+                class="work__images aos-init aos-animate"
+                data-aos="fade-right"
+              >
                 <img
                   src="assets/portfolio_img/textilee.png"
                   alt="Screenshot of 'Textilee' desktop website."
                 />
               </div>
-              <div class="work__info" data-aos="fade-left">
+              <div class="work__info aos-init aos-animate" data-aos="fade-left">
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Textilee.</h4>
                 <p>
@@ -332,14 +357,13 @@
 
                 <a
                   href="https://yiyingzz.github.io/yiying-zou-project-two/"
-                  target="_blank"
-                  ><button>Visit</button></a
+                  class="work__link"
+                  >Visit</a
                 >
                 <a
                   href="https://github.com/yiyingzz/yiying-zou-project-two"
-                  target="_blank"
-                >
-                  <button>Github</button>
+                  class="work__link"
+                  >Github
                 </a>
               </div>
             </li>
@@ -350,28 +374,45 @@
 
       <section id="contact" class="contact">
         <div class="wrapper flex-container">
-          <div class="contact__info" data-aos="fade-right">
+          <div class="contact__info aos-init aos-animate" data-aos="fade-right">
             <h3>Get in touch</h3>
             <p>Want to work together? I'd love to hear from you!</p>
             <ul class="flex-container contact__social">
               <li>
-                <a href="https://www.linkedin.com/in/yzou/" target="_blank"
+                <a
+                  href="https://www.linkedin.com/in/yzou/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Opens a new page to Yiying Zou's LinkedIn account"
                   ><i class="fab fa-linkedin" aria-hidden="true"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.github.com/yiyingzz/" target="_blank"
+                <a
+                  href="https://www.github.com/yiyingzz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Opens a new page to Yiying Zou's Github account"
                   ><i class="fab fa-github" aria-hidden="true"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.twitter.com/yiyingzz" target="_blank"
-                  ><span class="visually-hidden">go to twitter</span><i class="fab fa-twitter" aria-hidden="true"></i
+                <a
+                  href="https://www.twitter.com/yiyingzz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Opens a new page to Yiying Zou's Twitter account"
+                  ><i class="fab fa-twitter" aria-hidden="true"></i
                 ></a>
               </li>
             </ul>
           </div>
-          <form action="https://formspree.io/myykgvoa" method="POST" class="flex-container" data-aos="fade-left">
+          <form
+            action="https://formspree.io/myykgvoa"
+            method="POST"
+            class="flex-container aos-init aos-animate"
+            data-aos="fade-left"
+          >
             <label for="name" class="visually-hidden">Name</label>
             <input type="text" id="name" placeholder="name" />
             <label for="email" class="visually-hidden">Email</label>
@@ -388,13 +429,15 @@
     <footer>
       <div class="wrapper">
         <p>
-          Coded by Yiying Zou 2019. Designed by <a href="https://themeforest.net/user/vlthemes" target="_blank">VLThemes</a>. Photo by <a href="https://fgueye.com" target=_blank">Fatima Gueye</a>.
+          Coded by Yiying Zou 2019. Designed by
+          <a href="https://themeforest.net/user/vlthemes">VLThemes</a>. Photo by
+          <a href="https://fgueye.com">Fatima Gueye</a>.
         </p>
       </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>

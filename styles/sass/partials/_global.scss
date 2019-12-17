@@ -11,9 +11,11 @@ li {
 }
 
 body {
+  background-color: $white;
   font-family: $bodyFont;
   font-size: 2rem;
   color: $primaryTextColor;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -31,7 +33,6 @@ h3,
 h4 {
   text-transform: lowercase;
   font-family: $headerFont;
-  color: $primaryTitleColor;
 }
 
 h2 {
@@ -44,11 +45,10 @@ h1 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 h4 {
-  color: $primaryTitleColor;
   position: relative;
   display: inline-block;
   font-size: 3rem;
@@ -58,7 +58,7 @@ h4 {
 h4::after {
   content: "";
   display: block;
-  background-color: $yellow;
+  background-color: $accentColor;
   height: 13px;
   position: absolute;
   bottom: 1px;
@@ -74,36 +74,13 @@ h4::after {
   align-items: center;
 }
 
-button {
-  background-color: $pink;
-  padding: 10px 20px;
-  font-family: $headerFont;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  color: $secondaryTextColor;
-  border: 0;
-  box-shadow: 5px 5px 0 $lightGrey;
-  position: relative;
-  top: 0;
-  left: 0;
-  transition: 0.3s all;
-
-  &:hover,
-  &:focus {
-    background-color: $turquoise;
-    box-shadow: none;
-    top: 5px;
-    left: 5px;
-  }
-}
-
 a {
-  color: $pink;
+  color: $primaryColor;
   text-decoration: none;
   transition: 0.3s all;
 
   &:hover,
   &:focus {
-    color: $turquoise;
+    color: $secondaryColor;
   }
 }
