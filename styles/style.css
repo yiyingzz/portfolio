@@ -1002,15 +1002,16 @@ nav ul li {
   }
 }
 
-.contact__social i {
-  font-size: 4rem;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
+.contact__social a {
   color: #fdf4b4;
 }
 
-.contact__social i:hover, .contact__social i:focus {
+.contact__social a:hover, .contact__social a:focus {
   color: #e02255;
+}
+
+.contact__social i {
+  font-size: 4rem;
 }
 
 @media (max-width: 890px) {

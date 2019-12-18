@@ -45,15 +45,17 @@
     }
   }
 
-  i {
-    font-size: 4rem;
-    transition: 0.3s all;
+  a {
     color: $accentColor;
 
     &:hover,
     &:focus {
       color: $primaryColor;
     }
+  }
+
+  i {
+    font-size: 4rem;
 
     @media (max-width: 890px) {
       font-size: 3rem;
