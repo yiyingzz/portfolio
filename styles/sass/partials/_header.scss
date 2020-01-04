@@ -1,5 +1,6 @@
 header {
-  background-image: url(../assets/header_bg.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15)),
+    url(../assets/header_gradient_bg.svg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -22,6 +23,15 @@ h2,
   display: block;
   margin: 0;
   text-align: center;
+}
+
+h1,
+h2 {
+  color: $secondaryTextColor;
+}
+
+.header__content i {
+  color: $accentColor;
 }
 
 h1 {
