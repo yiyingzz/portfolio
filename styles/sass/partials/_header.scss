@@ -1,5 +1,5 @@
 header {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15)),
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2)),
     url(../assets/header_gradient_bg.svg);
   background-size: cover;
   background-position: center;
@@ -28,10 +28,7 @@ h2,
 h1,
 h2 {
   color: $secondaryTextColor;
-}
-
-.header__content i {
-  color: $accentColor;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -213,13 +210,13 @@ nav ul {
 
   &:hover > .scroll-down__icon,
   &:focus > .scroll-down__icon {
-    color: $secondaryColor;
+    color: $primaryColor;
   }
 }
 
 .scroll-down__icon {
   font-size: 5rem;
-  color: $primaryColor;
+  color: $accentColor;
   transition: 0.3s all;
 }
 

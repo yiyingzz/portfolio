@@ -103,8 +103,6 @@
 
     &:hover + p,
     &:focus + p {
-      opacity: 1;
-      top: 0;
       color: $accentColor;
     }
   }
