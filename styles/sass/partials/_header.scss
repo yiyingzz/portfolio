@@ -1,20 +1,39 @@
 header {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2)),
-    url(../assets/header_gradient_bg.svg);
+    url(../assets/header_gradient.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
   position: relative;
+
+  @media (max-width: 1023px) {
+    background-position: center left;
+  }
 }
 
 .header__content {
   height: 100vh;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1023px) {
+    height: 95vh;
+  }
+
+  @media (max-width: 600px) {
+    height: 400px;
+  }
 }
 
 .header__titles {
   margin-top: -80px;
+
+  @media (max-width: 1023px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: -100px;
+  }
 }
 
 h1,

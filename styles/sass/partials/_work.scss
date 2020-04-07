@@ -40,7 +40,7 @@
     width: 100%;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     text-align: center;
   }
 
@@ -54,18 +54,6 @@
 
   p:first-of-type {
     margin-top: 0;
-  }
-
-  button {
-    margin-right: 10px;
-
-    @media (max-width: 769px) {
-      // text-align: center;
-    }
-
-    @media (max-width: 480px) {
-      margin: 5px;
-    }
   }
 }
 
@@ -96,7 +84,7 @@
     padding: 5px 6px;
     background: $accentColor;
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       text-align: center;
     }
   }

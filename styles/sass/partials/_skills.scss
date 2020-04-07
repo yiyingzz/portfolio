@@ -7,34 +7,42 @@
 
 .skills__title {
   font-size: calc(17rem - 2vw);
-  color: $primaryTextColor;
-  opacity: 0.2;
+  color: $primaryColor;
+  text-shadow: -2px -2px 0 $secondaryTextColor, 2px -2px 0 $secondaryTextColor,
+    -2px 2px 0 $secondaryTextColor, 2px 2px 0 $secondaryTextColor;
+  position: relative;
+  top: -8px;
+
+  @media (max-width: 1250px) {
+    top: -5px;
+  }
 
   @media (max-width: 1105px) {
     font-size: calc(14rem - 1vw);
+    top: -10px;
   }
 
   @media (max-width: 985px) {
     font-size: calc(10rem + 1.5vw);
+    top: -16px;
   }
 
   @media (max-width: 850px) {
     font-size: calc(8rem + 1vw);
-    position: relative;
-    top: -20px;
+    top: -25px;
     margin-top: 50px;
   }
 
   @media (max-width: 660px) {
     font-size: calc(6rem + 1vw);
     margin-top: 60px;
-    top: -30px;
+    top: -35px;
   }
 
   @media (max-width: 440px) {
     font-size: calc(4rem + 1.5vw);
     margin-top: 70px;
-    top: -40px;
+    top: -42px;
   }
 
   @media (max-width: 320px) {
@@ -48,6 +56,7 @@
 }
 
 .skills__bg {
+  padding-top: 20px;
   position: relative;
 }
 
