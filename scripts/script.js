@@ -26,9 +26,12 @@ portfolio.init = () => {
 
   // close menu when a link is clicked or enter key
   $("nav li, .nav__close").on("click keydown", function (e) {
-    console.log(e);
     if (e.type === "click" || e.keyCode === 13) {
       portfolio.closeMenu();
+
+      if ($(e.target).hasClass("nav__close")) {
+        $(".nav__toggle")[0].focus();
+      }
     }
   });
 
