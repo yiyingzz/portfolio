@@ -25,13 +25,14 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
     <header>
-      <button class="nav__toggle">
-        <span class="visually-hidden">Click to toggle navigation menu</span>
-        <i class="fas fa-bars" aria-hidden="true"></i>
+      <button class="nav__toggle" aria-expanded="false">
+        <span class="visually-hidden">Navigation menu</span>
+        <i class="fas fa-bars nav__icon" aria-hidden="true"></i>
       </button>
 
-      <nav class="closed header__nav">
+      <nav class="closed header__nav" role="navigation">
         <ul class="wrapper flex-container">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -41,25 +42,34 @@
           </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <a href="javascript:void(0)" class="nav__close sr-only"
+          >Close navigation menu</a
+        >
       </nav>
 
       <div class="header__content flex-container">
         <div class="header__titles">
           <h1>
-            <span class="hi">Hi,</span> I'm Yiying<span class="period">.</span>
+            <span class="hi">Hi,</span> I'm Yiying<span
+              class="period"
+              aria-hidden="true"
+              >.</span
+            >
           </h1>
           <h2>Front End Developer</h2>
 
           <div class="scroll-down" tabindex="0">
+            <span class="sr-only">Scroll to next section</span>
             <i
               class="fas fa-chevron-circle-down scroll-down__icon slide-bottom"
+              aria-hidden="true"
             ></i>
           </div>
         </div>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section id="about" class="about flex-container wrapper">
         <div class="about__info aos-init aos-animate" data-aos="fade-right">
           <h3>About Me</h3>
@@ -76,20 +86,19 @@
           </p>
           <p>
             When I'm not writing code, you'll find me painting (I'm into oil &
-            digital!), dancing to some 90s tunes, or managing a
+            digital!), dancing to some 90s tunes, or playing DnD. I also write
+            about my thoughts on coding on my
             <a
-              href="https://discord.me/ctrl-alt-del/"
+              href="./blog/"
               target="_blank"
               rel="noopener noreferrer"
-              >tech community</a
-            >
-            online. I also write about my thoughts on coding on my
-            <a href="./blog/" target="_blank" rel="noopener noreferrer">blog</a
-            >.
+              aria-label="Blog, opens in a new tab."
+              >blog</a
+            ><span aria-hidden="true">.</span>
           </p>
         </div>
         <div class="about__img aos-init aos-animate" data-aos="fade-left">
-          <img src="assets/headshot.jpg" alt="Photo of Yiying Zou" />
+          <img src="assets/headshot.jpg" alt="" />
         </div>
       </section>
       <!-- /about section-->
@@ -156,16 +165,14 @@
           <h3 class="aos-init aos-animate" data-aos="fade-down">
             Things I've Made
           </h3>
+          <p class="sr-only">All links open in a new tab.</p>
           <ul class="work__list">
             <li class="work__project work__project-left flex-container">
               <div
                 class="work__images aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <img
-                  src="assets/portfolio_img/gif-movie.png"
-                  alt="Screenshot of 'Gif Me a Movie' desktop website."
-                />
+                <img src="assets/portfolio_img/gif-movie.png" alt="" />
               </div>
               <div class="work__info aos-init aos-animate" data-aos="fade-left">
                 <img src="assets/lines.jpg" alt="" />
@@ -193,8 +200,9 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     >Vipin Kirthane</a
-                  >.
+                  ><span aria-hidden="true">.</span>
                 </p>
+                <p class="sr-only">Tools used in this project:</p>
                 <ul class="work__project__skills">
                   <li>React</li>
                   <li>API</li>
@@ -209,14 +217,14 @@
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Visit</a
+                  >Visit <span class="sr-only">Live website</span></a
                 >
                 <a
                   href="https://github.com/Team-OutOfContext/gifMeAMovieApp"
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Github
+                  ><span class="sr-only">View on</span> Github
                 </a>
               </div>
               <div class="work__divider">
@@ -229,10 +237,7 @@
                 class="work__images aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <img
-                  src="assets/portfolio_img/yiying-yells.png"
-                  alt="Screenshot of 'Yiying Yells' desktop website."
-                />
+                <img src="assets/portfolio_img/yiying-yells.png" alt="" />
               </div>
               <div
                 class="work__info aos-init aos-animate"
@@ -244,6 +249,7 @@
                   My version of Simon Says-- hence, Yiying Yells-- a game to
                   test your memory with colour-changing blocks.
                 </p>
+                <p class="sr-only">Tools used in this project:</p>
                 <ul class="work__project__skills">
                   <li>JavaScript</li>
                   <li>jQuery</li>
@@ -257,14 +263,14 @@
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Visit</a
+                  >Visit <span class="sr-only">Live website</span></a
                 >
                 <a
                   href="https://github.com/yiyingzz/yiyingZouProjectThree"
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Github
+                  ><span class="sr-only">View on</span> Github
                 </a>
               </div>
               <div class="work__divider">
@@ -277,18 +283,16 @@
                 class="work__images aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <img
-                  src="assets/portfolio_img/going-dutch.png"
-                  alt="Screenshot of 'Going Dutch' desktop website."
-                />
+                <img src="assets/portfolio_img/going-dutch.png" alt="" />
               </div>
               <div class="work__info aos-init aos-animate" data-aos="fade-left">
                 <img src="assets/lines.jpg" alt="" />
                 <h4>Going Dutch.</h4>
                 <p>
-                  An app for splitting bills between two people and lets you
-                  view previous bills.
+                  An app for splitting bills between multiple people and stores
+                  data on previous bills.
                 </p>
+                <p class="sr-only">Tools used in this project:</p>
                 <ul class="work__project__skills">
                   <li>React</li>
                   <li>Firebase</li>
@@ -302,14 +306,14 @@
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Visit</a
+                  >Visit <span class="sr-only">Live website</span></a
                 >
                 <a
                   href="https://github.com/yiyingzz/goingDutch"
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Github</a
+                  ><span class="sr-only">View on</span> Github</a
                 >
               </div>
               <div class="work__divider">
@@ -322,10 +326,7 @@
                 class="work__images aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <img
-                  src="assets/portfolio_img/charmer.png"
-                  alt="Screenshot of 'Charmer' desktop website."
-                />
+                <img src="assets/portfolio_img/charmer.png" alt="" />
               </div>
               <div
                 class="work__info aos-init aos-animate"
@@ -345,8 +346,9 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     >Keil Martin</a
-                  >.
+                  ><span aria-hidden="true">.</span>
                 </p>
+                <p class="sr-only">Tools used in this project:</p>
                 <ul class="work__project__skills">
                   <li>API</li>
                   <li>JavaScript</li>
@@ -362,14 +364,14 @@
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Visit</a
+                  >Visit <span class="sr-only">Live website</span></a
                 >
                 <a
                   href="https://github.com/yiyingzz/charmer"
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Github</a
+                  ><span class="sr-only">View on</span> Github</a
                 >
               </div>
               <div class="work__divider">
@@ -382,10 +384,7 @@
                 class="work__images aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <img
-                  src="assets/portfolio_img/textilee.png"
-                  alt="Screenshot of 'Textilee' desktop website."
-                />
+                <img src="assets/portfolio_img/textilee.png" alt="" />
               </div>
               <div class="work__info aos-init aos-animate" data-aos="fade-left">
                 <img src="assets/lines.jpg" alt="" />
@@ -394,6 +393,7 @@
                   A fully responsive multi-page PSD conversion for a textiles
                   website using CSS Flexbox.
                 </p>
+                <p class="sr-only">Tools used in this project:</p>
                 <ul class="work__project__skills">
                   <li>HTML5</li>
                   <li>CSS3</li>
@@ -405,14 +405,14 @@
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Visit</a
+                  >Visit <span class="sr-only">Live website</span></a
                 >
                 <a
                   href="https://github.com/yiyingzz/yiying-zou-project-two"
                   class="work__link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Github
+                  ><span class="sr-only">View on</span> Github
                 </a>
               </div>
             </li>
@@ -434,13 +434,16 @@
               love to hear from you!
             </p>
             <p>My email: <strong>yiyingzou@gmail.com</strong></p>
+            <p class="sr-only">
+              Find me on social media! All links open in a new tab.
+            </p>
             <ul class="flex-container contact__social">
               <li>
                 <a
                   href="https://www.linkedin.com/in/yzou/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Opens a new page to Yiying Zou's LinkedIn account"
+                  aria-label="Yiying Zou's LinkedIn account"
                   ><i class="fab fa-linkedin" aria-hidden="true"></i
                 ></a>
               </li>
@@ -449,7 +452,7 @@
                   href="https://www.github.com/yiyingzz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Opens a new page to Yiying Zou's Github account"
+                  aria-label="Yiying Zou's Github account"
                   ><i class="fab fa-github" aria-hidden="true"></i
                 ></a>
               </li>
@@ -458,7 +461,7 @@
                   href="https://www.twitter.com/yiyingzz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Opens a new page to Yiying Zou's Twitter account"
+                  aria-label="Yiying Zou's Twitter account"
                   ><i class="fab fa-twitter" aria-hidden="true"></i
                 ></a>
               </li>
@@ -467,13 +470,14 @@
                   href="https://medium.com/@yiyingzou"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Opens a new page to Yiying Zou's Medium account"
+                  aria-label="Yiying Zou's Medium account"
                 >
                   <i class="fab fa-medium-m" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
           </div>
+          <h4 class="sr-only">Contact form</h4>
           <form
             action="https://formspree.io/myykgvoa"
             method="POST"
@@ -507,8 +511,10 @@
         <p>
           &copy; 2020 Yiying Zou. Photo by
           <a href="http://fgueye.com" target="_blank" rel="noopener noreferrer"
-            >Fatima Gueye</a
-          >.
+            >Fatima Gueye<span class="sr-only">
+              link opens in a new tab</span
+            ></a
+          ><span aria-hidden="true">.</span>
         </p>
       </div>
     </footer>

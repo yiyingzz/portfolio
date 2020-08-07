@@ -442,6 +442,12 @@ h2 {
   right: 25px;
   border: 0;
   z-index: 10;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #62239a;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   cursor: pointer;
 }
 
@@ -449,50 +455,26 @@ h2 {
   .nav__toggle {
     top: 15px;
     right: 15px;
+    width: 50px;
+    height: 50px;
   }
+}
+
+.nav__toggle:hover, .nav__toggle:focus {
+  background-color: #cc076e;
 }
 
 .nav__toggle i {
   font-size: 3rem;
   color: #fff;
   position: relative;
+  top: 1px;
 }
 
 @media (max-width: 500px) {
   .nav__toggle i {
     font-size: 2.7rem;
-    top: 5px;
-    right: 5px;
   }
-}
-
-.nav__toggle i::after {
-  content: "";
-  display: block;
-  width: 55px;
-  height: 55px;
-  position: absolute;
-  top: -13px;
-  left: -14px;
-  border-radius: 50%;
-  background-color: #62239a;
-  z-index: -1;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
-}
-
-@media (max-width: 500px) {
-  .nav__toggle i::after {
-    width: 50px;
-    height: 50px;
-    top: -12px;
-    left: -13px;
-  }
-}
-
-.nav__toggle:hover > i::after,
-.nav__toggle:focus > i::after {
-  background-color: #cc076e;
 }
 
 .nav-visible {
