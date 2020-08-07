@@ -193,7 +193,7 @@ input::-moz-focus-inner {
   box-sizing: border-box;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.sr-only:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -292,6 +292,26 @@ a {
 
 a:hover, a:focus {
   color: #62239a;
+}
+
+.sr-only-show-focus:focus,
+.sr-only-show-focus:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+          clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  padding: 10px;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+  z-index: 99;
+  background-color: #cc076e;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: "Muli", sans-serif;
+  text-transform: none;
+  font-weight: normal;
 }
 
 header {
@@ -532,6 +552,12 @@ nav ul a {
 nav ul li {
   width: 100%;
   position: relative;
+}
+
+.nav__close:focus,
+.nav__close:active {
+  position: absolute;
+  bottom: 0;
 }
 
 .scroll-down {

@@ -203,6 +203,13 @@ nav ul {
   }
 }
 
+// for accessibility
+.nav__close:focus,
+.nav__close:active {
+  position: absolute;
+  bottom: 0;
+}
+
 // animation for scroll down icon
 .scroll-down {
   cursor: pointer;

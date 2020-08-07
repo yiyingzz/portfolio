@@ -6,13 +6,15 @@ portfolio.init = () => {
   // EVENT HANDLERS
 
   // scroll down on header
-  $(".scroll-down").on("click keydown", function () {
-    $("html, body").animate(
-      {
-        scrollTop: $("#about").offset().top
-      },
-      500
-    );
+  $(".scroll-down").on("click keydown", function (e) {
+    if (e.type === "click" || e.keyCode === 13 || e.keyCode === 32) {
+      $("html, body").animate(
+        {
+          scrollTop: $("#about").offset().top
+        },
+        500
+      );
+    }
   });
 
   // toggle navigation menu
