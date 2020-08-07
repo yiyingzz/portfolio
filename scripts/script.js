@@ -25,13 +25,10 @@ portfolio.init = () => {
   });
 
   // close menu when a link is clicked or enter key
-  $("nav li, .nav__close").on("click keydown", function (e) {
-    if (e.type === "click" || e.keyCode === 13) {
-      portfolio.closeMenu();
-
-      if ($(e.target).hasClass("nav__close")) {
-        $(".nav__toggle")[0].focus();
-      }
+  $("nav li, .nav__close").on("click", function (e) {
+    portfolio.closeMenu();
+    if ($(e.target).hasClass("nav__close")) {
+      $(".nav__toggle")[0].focus();
     }
   });
 
@@ -63,6 +60,8 @@ portfolio.closeMenu = function () {
   portfolio.isMenuOpen = false;
   $(".nav__toggle").attr("aria-expanded", "false");
   $(".nav__icon").removeClass("fa-times").addClass("fa-bars");
+  console.log("closed");
+  console.log($(".nav__icon"));
 };
 
 $(function () {
