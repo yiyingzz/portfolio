@@ -849,6 +849,32 @@ nav ul li {
   color: #fdf4b4;
 }
 
+.skills__icons .skills__firebase {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills__icons .svg-icon {
+  background-image: url(../assets/icons/firebase.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+.skills__icons .svg-icon:hover, .skills__icons .svg-icon:focus {
+  -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2482%) hue-rotate(354deg) brightness(109%) contrast(98%);
+          filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2482%) hue-rotate(354deg) brightness(109%) contrast(98%);
+}
+
+.skills__icons .svg-icon:hover + p,
+.skills__icons .svg-icon:focus + p {
+  color: #fdf4b4;
+}
+
 .work {
   padding-top: 20px;
 }
