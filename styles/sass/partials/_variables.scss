@@ -1,6 +1,14 @@
 // FONT
+//default
 $bodyFont: "Muli", sans-serif;
 $headerFont: "Montserrat", sans-serif;
+
+//alt
+$bodyFont-alt: "Comic Sans", cursive;
+$headerFont-alt: "Times New Roman", serif;
+$altFont-1: "Impact", serif;
+$altFont-2: "Lucida Console", cursive;
+$altFont-3: "Courier New", monospace;
 
 // COLOURS
 $pink: #cc076e; // #e02255;
@@ -9,6 +17,9 @@ $darkBlue: #62239a; // #0074b8;
 $turquoise: #24bebb;
 $black: #000;
 $white: #fff;
+$mediumBlue: deepskyblue;
+$alt-pink: #e60073;
+$gold: gold;
 
 $primaryTextColor: $black;
 $secondaryTextColor: $white;

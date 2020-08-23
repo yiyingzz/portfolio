@@ -7,6 +7,33 @@
   }
 }
 
+:root[data-theme="alt"] .work {
+  background-image: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  color: $white;
+  font-family: $altFont-2;
+
+  a {
+    cursor: crosshair;
+    font-family: $altFont-3;
+
+    &:hover,
+    &:focus {
+      border: 1px dashed $turquoise;
+      background-color: $alt-pink;
+      color: $gold;
+    }
+  }
+}
+
 // PROJECTS
 .work__project {
   margin: 120px 0;

@@ -109,6 +109,10 @@ h2 {
   }
 }
 
+:root[data-theme="alt"] h2 {
+  font-family: $altFont-3;
+}
+
 // NAVIGATION MENU
 
 .nav__toggle {
@@ -164,7 +168,7 @@ nav {
   transition: 0.3s all;
 
   background: $accentColor;
-  font-family: $headerFont;
+  font-family: $bodyFont;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.8rem;

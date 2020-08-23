@@ -212,19 +212,23 @@ html {
   font-size: 62.5%;
 }
 
-ul,
-li {
+:root[data-theme="main"] ul,
+:root[data-theme="main"] li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-body {
+:root[data-theme="main"] body {
   background-color: #fff;
   font-family: "Muli", sans-serif;
   font-size: 2rem;
   color: #000;
   overflow-x: hidden;
+}
+
+:root[data-theme="alt"] body {
+  font-family: "Comic Sans", cursive;
 }
 
 .wrapper {
@@ -244,6 +248,16 @@ h3,
 h4 {
   text-transform: lowercase;
   font-family: "Montserrat", sans-serif;
+}
+
+:root[data-theme="alt"] h1 {
+  font-family: "Lucida Console", cursive;
+}
+
+:root[data-theme="alt"] h3,
+:root[data-theme="alt"] h4 {
+  text-transform: lowercase;
+  font-family: "Comic Sans", cursive;
 }
 
 h3 {
@@ -455,6 +469,10 @@ h2 {
   }
 }
 
+:root[data-theme="alt"] h2 {
+  font-family: "Courier New", monospace;
+}
+
 .nav__toggle {
   position: fixed;
   padding: 0;
@@ -511,7 +529,7 @@ nav {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   background: #fdf4b4;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Muli", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.8rem;
@@ -714,7 +732,65 @@ nav ul li {
   color: #fff;
 }
 
-.skills__title {
+:root[data-theme="alt"] .skills {
+  background-image: url(../assets/alt/bubble-pattern.gif);
+  cursor: help;
+}
+
+:root[data-theme="alt"] .skills__table {
+  border: 10px outset #fff;
+  width: 95%;
+  margin: 0 auto;
+}
+
+:root[data-theme="alt"] .skills__table tr {
+  border: 2px solid #000;
+}
+
+:root[data-theme="alt"] .skills__table td {
+  border: 2px solid #000;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+          box-shadow: inset 0 0 0 1px #fff;
+  padding: 10px;
+  font-size: 2rem;
+  color: deepskyblue;
+}
+
+:root[data-theme="alt"] .skills__table td i {
+  font-size: 6rem;
+  color: #fff;
+}
+
+:root[data-theme="alt"] .skills__table td .fa-html5,
+:root[data-theme="alt"] .skills__table td .devicon-jquery-plain,
+:root[data-theme="alt"] .skills__table td .devicon-photoshop-plain {
+  color: #cc076e;
+}
+
+:root[data-theme="alt"] .skills__table td .fa-js,
+:root[data-theme="alt"] .skills__table td .fa-react {
+  color: #24bebb;
+}
+
+:root[data-theme="alt"] .skills__table td .firebase-icon {
+  background-image: url(../assets/icons/firebase.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  width: 100%;
+  height: 60px;
+  -webkit-filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
+          filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
+}
+
+:root[data-theme="alt"] .skills__table td p {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  font-family: "Impact", serif;
+  text-transform: none;
+}
+
+:root[data-theme="main"] .skills__title {
   font-size: calc(17rem - 2vw);
   color: #cc076e;
   text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
@@ -723,27 +799,27 @@ nav ul li {
 }
 
 @media (max-width: 1250px) {
-  .skills__title {
+  :root[data-theme="main"] .skills__title {
     top: -5px;
   }
 }
 
 @media (max-width: 1105px) {
-  .skills__title {
+  :root[data-theme="main"] .skills__title {
     font-size: calc(14rem - 1vw);
     top: -10px;
   }
 }
 
 @media (max-width: 985px) {
-  .skills__title {
+  :root[data-theme="main"] .skills__title {
     font-size: calc(10rem + 1.5vw);
     top: -16px;
   }
 }
 
 @media (max-width: 850px) {
-  .skills__title {
+  :root[data-theme="main"] .skills__title {
     font-size: calc(8rem + 1vw);
     top: -25px;
     margin-top: 50px;
@@ -751,7 +827,7 @@ nav ul li {
 }
 
 @media (max-width: 660px) {
-  .skills__title {
+  :root[data-theme="main"] .skills__title {
     font-size: calc(6rem + 1vw);
     margin-top: 60px;
     top: -35px;
@@ -759,7 +835,7 @@ nav ul li {
 }
 
 @media (max-width: 440px) {
-  .skills__title {
+  :root[data-theme="main"] .skills__title {
     font-size: calc(4rem + 1.5vw);
     margin-top: 70px;
     top: -42px;
@@ -767,14 +843,25 @@ nav ul li {
 }
 
 @media (max-width: 320px) {
-  .skills__title {
+  :root[data-theme="main"] .skills__title {
     font-size: 3.5rem;
   }
+}
+
+:root[data-theme="alt"] .skills__title {
+  font-size: calc(17rem - 2vw);
+  color: #cc076e;
+  text-shadow: -10px -10px 0 deepskyblue;
+  color: gold;
 }
 
 .skills__icons {
   position: relative;
   top: -50px;
+}
+
+:root[data-theme="alt"] .skills__icons {
+  display: none;
 }
 
 .skills__bg {
@@ -855,7 +942,7 @@ nav ul li {
           justify-content: center;
 }
 
-.skills__icons .svg-icon {
+.skills__icons .firebase-icon {
   background-image: url(../assets/icons/firebase.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -865,13 +952,13 @@ nav ul li {
   height: 60px;
 }
 
-.skills__icons .svg-icon:hover, .skills__icons .svg-icon:focus {
+.skills__icons .firebase-icon:hover, .skills__icons .firebase-icon:focus {
   -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2482%) hue-rotate(354deg) brightness(109%) contrast(98%);
           filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2482%) hue-rotate(354deg) brightness(109%) contrast(98%);
 }
 
-.skills__icons .svg-icon:hover + p,
-.skills__icons .svg-icon:focus + p {
+.skills__icons .firebase-icon:hover + p,
+.skills__icons .firebase-icon:focus + p {
   color: #fdf4b4;
 }
 
@@ -882,6 +969,24 @@ nav ul li {
 .work h3 {
   text-align: center;
   color: #62239a;
+}
+
+:root[data-theme="alt"] .work {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
+  background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+  color: #fff;
+  font-family: "Lucida Console", cursive;
+}
+
+:root[data-theme="alt"] .work a {
+  cursor: crosshair;
+  font-family: "Courier New", monospace;
+}
+
+:root[data-theme="alt"] .work a:hover, :root[data-theme="alt"] .work a:focus {
+  border: 1px dashed #24bebb;
+  background-color: #e60073;
+  color: gold;
 }
 
 .work__project {
@@ -1034,6 +1139,14 @@ nav ul li {
   background-position: bottom center;
   color: #fff;
   padding: 50px 0;
+}
+
+:root[data-theme="alt"] .contact {
+  background-image: url(../assets/alt/butterfly-pattern.png);
+}
+
+:root[data-theme="alt"] .contact h3 {
+  font-family: "Courier New", monospace;
 }
 
 .contact__info {

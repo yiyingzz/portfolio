@@ -3,19 +3,23 @@ html {
   font-size: 62.5%;
 }
 
-ul,
-li {
+:root[data-theme="main"] ul,
+:root[data-theme="main"] li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-body {
+:root[data-theme="main"] body {
   background-color: $white;
   font-family: $bodyFont;
   font-size: 2rem;
   color: $primaryTextColor;
   overflow-x: hidden;
+}
+
+:root[data-theme="alt"] body {
+  font-family: $bodyFont-alt;
 }
 
 .wrapper {
@@ -33,6 +37,16 @@ h3,
 h4 {
   text-transform: lowercase;
   font-family: $headerFont;
+}
+
+:root[data-theme="alt"] h1 {
+  font-family: $altFont-2;
+}
+
+:root[data-theme="alt"] h3,
+:root[data-theme="alt"] h4 {
+  text-transform: lowercase;
+  font-family: $bodyFont-alt;
 }
 
 h3 {

@@ -6,6 +6,14 @@
   padding: 50px 0;
 }
 
+:root[data-theme="alt"] .contact {
+  background-image: url(../assets/alt/butterfly-pattern.png);
+
+  h3 {
+    font-family: $altFont-3;
+  }
+}
+
 .contact__info {
   width: calc(40% - 20px);
 
