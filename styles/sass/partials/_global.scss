@@ -27,6 +27,7 @@ body {
 
 :root[data-theme="alt"] body {
   font-family: $bodyFont-alt;
+  overflow: auto;
 }
 
 .wrapper {
@@ -104,12 +105,6 @@ h4::after {
   align-items: center;
 }
 
-:root[data-theme="alt"] .flex-container {
-  @media (max-width: 769px) {
-    display: inline-block;
-  }
-}
-
 a {
   color: $primaryColor;
   text-decoration: none;
@@ -154,10 +149,10 @@ a {
   font-weight: normal;
 }
 
-.alt-img {
+.alt-content {
   display: none;
 }
 
-:root[data-theme="alt"] .alt-img {
+:root[data-theme="alt"] .alt-content {
   display: inline-block;
 }

@@ -14,7 +14,7 @@
   text-align: right;
 }
 
-:root[data-theme="main"] .skills__title {
+.skills__title {
   font-size: calc(17rem - 2vw);
   color: $primaryColor;
   text-shadow: -2px -2px 0 $secondaryTextColor, 2px -2px 0 $secondaryTextColor,
@@ -67,16 +67,16 @@
   margin: 0;
 }
 
-.skills__table {
-  display: none;
-}
-
-:root[data-theme="alt"] .skills__table {
-  display: table;
+:root[data-theme="alt"] .skills__table-container {
+  display: block;
   border: 10px outset $white;
   width: 95%;
   margin: 0 auto;
   text-align: center;
+
+  table {
+    width: 100%;
+  }
 
   tr {
     border: 2px solid $black;

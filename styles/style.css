@@ -236,6 +236,7 @@ body {
 
 :root[data-theme="alt"] body {
   font-family: "Comic Sans", cursive;
+  overflow: auto;
 }
 
 .wrapper {
@@ -322,12 +323,6 @@ h4::after {
           align-items: center;
 }
 
-@media (max-width: 769px) {
-  :root[data-theme="alt"] .flex-container {
-    display: inline-block;
-  }
-}
-
 a {
   color: #cc076e;
   text-decoration: none;
@@ -372,11 +367,11 @@ a:hover, a:focus {
   font-weight: normal;
 }
 
-.alt-img {
+.alt-content {
   display: none;
 }
 
-:root[data-theme="alt"] .alt-img {
+:root[data-theme="alt"] .alt-content {
   display: inline-block;
 }
 
@@ -728,6 +723,8 @@ nav ul li {
 
 :root[data-theme="alt"] .about {
   background-image: url(../assets/alt/cherryblossompattern.gif);
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .about__info {
@@ -746,6 +743,7 @@ nav ul li {
 
 :root[data-theme="alt"] .about__info {
   width: 640px;
+  min-width: 640px;
   font-family: "Verdana", sans-serif;
   color: #24bebb;
   margin-left: 50px;
@@ -804,7 +802,18 @@ nav ul li {
   }
 }
 
+@media (max-width: 769px) {
+  :root[data-theme="alt"] .about__img {
+    margin-top: 100px;
+    width: 300px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
 :root[data-theme="alt"] .about__img img {
+  height: 100%;
   width: 300px;
   height: 500px;
 }
@@ -812,9 +821,6 @@ nav ul li {
 @media (max-width: 769px) {
   :root[data-theme="alt"] .about__img img {
     width: 300px;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
 }
 
@@ -831,8 +837,8 @@ nav ul li {
 }
 
 :root[data-theme="alt"] .about__img::after {
-  width: 1030px;
-  left: -700px;
+  width: 1010px;
+  left: -680px;
   bottom: -35px;
 }
 
@@ -852,7 +858,7 @@ nav ul li {
   text-align: right;
 }
 
-:root[data-theme="main"] .skills__title {
+.skills__title {
   font-size: calc(17rem - 2vw);
   color: #cc076e;
   text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
@@ -861,27 +867,27 @@ nav ul li {
 }
 
 @media (max-width: 1250px) {
-  :root[data-theme="main"] .skills__title {
+  .skills__title {
     top: -5px;
   }
 }
 
 @media (max-width: 1105px) {
-  :root[data-theme="main"] .skills__title {
+  .skills__title {
     font-size: calc(14rem - 1vw);
     top: -10px;
   }
 }
 
 @media (max-width: 985px) {
-  :root[data-theme="main"] .skills__title {
+  .skills__title {
     font-size: calc(10rem + 1.5vw);
     top: -16px;
   }
 }
 
 @media (max-width: 850px) {
-  :root[data-theme="main"] .skills__title {
+  .skills__title {
     font-size: calc(8rem + 1vw);
     top: -25px;
     margin-top: 50px;
@@ -889,7 +895,7 @@ nav ul li {
 }
 
 @media (max-width: 660px) {
-  :root[data-theme="main"] .skills__title {
+  .skills__title {
     font-size: calc(6rem + 1vw);
     margin-top: 60px;
     top: -35px;
@@ -897,7 +903,7 @@ nav ul li {
 }
 
 @media (max-width: 440px) {
-  :root[data-theme="main"] .skills__title {
+  .skills__title {
     font-size: calc(4rem + 1.5vw);
     margin-top: 70px;
     top: -42px;
@@ -905,7 +911,7 @@ nav ul li {
 }
 
 @media (max-width: 320px) {
-  :root[data-theme="main"] .skills__title {
+  .skills__title {
     font-size: 3.5rem;
   }
 }
@@ -918,23 +924,23 @@ nav ul li {
   margin: 0;
 }
 
-.skills__table {
-  display: none;
-}
-
-:root[data-theme="alt"] .skills__table {
-  display: table;
+:root[data-theme="alt"] .skills__table-container {
+  display: block;
   border: 10px outset #fff;
   width: 95%;
   margin: 0 auto;
   text-align: center;
 }
 
-:root[data-theme="alt"] .skills__table tr {
+:root[data-theme="alt"] .skills__table-container table {
+  width: 100%;
+}
+
+:root[data-theme="alt"] .skills__table-container tr {
   border: 2px solid #000;
 }
 
-:root[data-theme="alt"] .skills__table td {
+:root[data-theme="alt"] .skills__table-container td {
   border: 2px solid #000;
   -webkit-box-shadow: inset 0 0 0 1px #fff;
           box-shadow: inset 0 0 0 1px #fff;
@@ -943,23 +949,23 @@ nav ul li {
   color: deepskyblue;
 }
 
-:root[data-theme="alt"] .skills__table td i {
+:root[data-theme="alt"] .skills__table-container td i {
   font-size: 6rem;
   color: #fff;
 }
 
-:root[data-theme="alt"] .skills__table td .fa-html5,
-:root[data-theme="alt"] .skills__table td .devicon-jquery-plain,
-:root[data-theme="alt"] .skills__table td .devicon-photoshop-plain {
+:root[data-theme="alt"] .skills__table-container td .fa-html5,
+:root[data-theme="alt"] .skills__table-container td .devicon-jquery-plain,
+:root[data-theme="alt"] .skills__table-container td .devicon-photoshop-plain {
   color: #cc076e;
 }
 
-:root[data-theme="alt"] .skills__table td .fa-js,
-:root[data-theme="alt"] .skills__table td .fa-react {
+:root[data-theme="alt"] .skills__table-container td .fa-js,
+:root[data-theme="alt"] .skills__table-container td .fa-react {
   color: #24bebb;
 }
 
-:root[data-theme="alt"] .skills__table td .firebase-icon {
+:root[data-theme="alt"] .skills__table-container td .firebase-icon {
   background-image: url(../assets/icons/firebase.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -971,7 +977,7 @@ nav ul li {
           filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
 }
 
-:root[data-theme="alt"] .skills__table td p {
+:root[data-theme="alt"] .skills__table-container td p {
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   font-family: "Impact", serif;
   text-transform: none;
@@ -1403,6 +1409,10 @@ footer {
   font-size: 1.6rem;
   text-align: center;
   padding: 10px;
+}
+
+:root[data-theme="alt"] footer p:last-of-type {
+  margin-top: 0;
 }
 
 :root[data-theme="alt"] footer .blinkies img {

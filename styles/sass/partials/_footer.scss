@@ -5,6 +5,10 @@ footer {
 }
 
 :root[data-theme="alt"] footer {
+  p:last-of-type {
+    margin-top: 0;
+  }
+
   .blinkies {
     img {
       margin: 0 5px;
