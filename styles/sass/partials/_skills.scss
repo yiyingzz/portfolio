@@ -6,62 +6,12 @@
 }
 
 :root[data-theme="alt"] .skills {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 50px;
   background-image: url(../assets/alt/bubble-pattern.gif);
-  cursor: help;
-}
-
-:root[data-theme="alt"] .skills__table {
-  border: 10px outset $white;
-  width: 95%;
-  margin: 0 auto;
-
-  tr {
-    border: 2px solid $black;
-  }
-
-  td {
-    border: 2px solid $black;
-    box-shadow: inset 0 0 0 1px $white;
-    padding: 10px;
-    font-size: 2rem;
-    color: $mediumBlue;
-
-    i {
-      font-size: 6rem;
-      color: $white;
-    }
-
-    .fa-html5,
-    .devicon-jquery-plain,
-    .devicon-photoshop-plain {
-      color: $pink;
-    }
-
-    .fa-js,
-    .fa-react {
-      color: $turquoise;
-    }
-
-    .firebase-icon {
-      background-image: url(../assets/icons/firebase.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      display: block;
-      width: 100%;
-      height: 60px;
-      filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%)
-        hue-rotate(78deg) brightness(92%) contrast(90%);
-    }
-
-    p {
-      text-shadow: 0 0 10px $white, 0 0 20px $white, 0 0 30px $alt-pink,
-        0 0 40px $alt-pink, 0 0 50px $alt-pink, 0 0 60px $alt-pink,
-        0 0 70px $alt-pink;
-      font-family: $altFont-1;
-      text-transform: none;
-    }
-  }
+  cursor: sw-resize;
+  text-align: right;
 }
 
 :root[data-theme="main"] .skills__title {
@@ -110,19 +60,71 @@
 }
 
 :root[data-theme="alt"] .skills__title {
-  font-size: calc(17rem - 2vw);
+  font-size: 16rem;
   color: $primaryColor;
   text-shadow: -10px -10px 0 $mediumBlue;
   color: $gold;
+  margin: 0;
 }
 
-.skills__icons {
-  position: relative;
-  top: -50px;
-}
-
-:root[data-theme="alt"] .skills__icons {
+.skills__table {
   display: none;
+}
+
+:root[data-theme="alt"] .skills__table {
+  display: table;
+  border: 10px outset $white;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+
+  tr {
+    border: 2px solid $black;
+  }
+
+  td {
+    border: 2px solid $black;
+    box-shadow: inset 0 0 0 1px $white;
+    padding: 10px;
+    font-size: 2rem;
+    color: $mediumBlue;
+
+    i {
+      font-size: 6rem;
+      color: $white;
+    }
+
+    .fa-html5,
+    .devicon-jquery-plain,
+    .devicon-photoshop-plain {
+      color: $pink;
+    }
+
+    .fa-js,
+    .fa-react {
+      color: $turquoise;
+    }
+
+    .firebase-icon {
+      background-image: url(../assets/icons/firebase.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: block;
+      width: 100%;
+      height: 60px;
+      filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%)
+        hue-rotate(78deg) brightness(92%) contrast(90%);
+    }
+
+    p {
+      text-shadow: 0 0 10px $white, 0 0 20px $white, 0 0 30px $alt-pink,
+        0 0 40px $alt-pink, 0 0 50px $alt-pink, 0 0 60px $alt-pink,
+        0 0 70px $alt-pink;
+      font-family: $altFont;
+      text-transform: none;
+    }
+  }
 }
 
 .skills__bg {
@@ -143,9 +145,13 @@
 }
 
 .skills__icons {
+  position: relative;
+  top: -50px;
+
   @media (max-width: 440px) {
     justify-content: space-evenly;
   }
+
   li {
     width: 140px;
     margin: 15px 20px;
@@ -188,26 +194,30 @@
 
   .skills__firebase {
     justify-content: center;
-  }
 
-  .firebase-icon {
-    background-image: url(../assets/icons/firebase.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: block;
-    width: 100%;
-    height: 60px;
+    .firebase-icon {
+      background-image: url(../assets/icons/firebase.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: block;
+      width: 100%;
+      height: 60px;
 
-    &:hover,
-    &:focus {
-      filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2482%)
-        hue-rotate(354deg) brightness(109%) contrast(98%);
+      &:hover,
+      &:focus {
+        filter: brightness(0) saturate(100%) invert(89%) sepia(4%)
+          saturate(2482%) hue-rotate(354deg) brightness(109%) contrast(98%);
+      }
+
+      &:hover + p,
+      &:focus + p {
+        color: $accentColor;
+      }
     }
-
-    &:hover + p,
-    &:focus + p {
-      color: $accentColor;
-    }
   }
+}
+
+:root[data-theme="alt"] .skills__icons {
+  display: none;
 }

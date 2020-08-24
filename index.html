@@ -74,7 +74,19 @@
     <main id="main">
       <section id="about" class="about flex-container wrapper">
         <div class="about__info aos-init aos-animate" data-aos="fade-right">
-          <h3>About Me</h3>
+          <h3>
+            <img
+              src="./assets/alt/ccs-staff-icon.gif"
+              class="alt-img"
+              aria-hidden="true"
+            />
+            About Me
+            <img
+              src="./assets/alt/ccs-staff-icon.gif"
+              class="alt-img"
+              aria-hidden="true"
+            />
+          </h3>
           <p>
             My name is <span>Yiying Zou</span> and I'm a
             <span>front end web developer</span> based in Toronto.
@@ -108,54 +120,7 @@
       <section id="skills" class="skills">
         <h3 class="skills__title wrapper">My Toolbox</h3>
         <div class="skills__bg">
-          <table class="skills__table">
-            <tr>
-              <td>
-                <i class="fab fa-html5" aria-hidden="true"></i>
-                <p>HTML5</p>
-              </td>
-              <td>
-                <i class="fab fa-css3-alt" aria-hidden="true"></i>
-                <p>CSS3</p>
-              </td>
-              <td>
-                <i class="fab fa-sass" aria-hidden="true"></i>
-                <p>Sass</p>
-              </td>
-              <td>
-                <i class="fab fa-js" aria-hidden="true"></i>
-                <p>JavaScript</p>
-              </td>
-              <td>
-                <i class="devicon-jquery-plain" aria-hidden="true"></i>
-                <p>jQuery</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fab fa-react" aria-hidden="true"></i>
-                <p>React</p>
-              </td>
-              <td>
-                <span class="firebase-icon" aria-hidden="true"></span>
-                <p>Firebase</p>
-              </td>
-              <td>
-                <i class="devicon-photoshop-plain" aria-hidden="true"></i>
-                <p>Adobe Photoshop</p>
-              </td>
-              <td>
-                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                <p>Responsive Design</p>
-              </td>
-              <td>
-                <i class="fas fa-universal-access" aria-hidden="true"></i>
-                <p>Web Accessibility</p>
-              </td>
-            </tr>
-          </table>
-
-          <br /><br /><br /><br />
+          <!-- main theme skills -->
           <ul class="skills__icons wrapper flex-container">
             <li class="aos-init aos-animate" data-aos="fade-up">
               <i class="fab fa-html5" aria-hidden="true"></i>
@@ -210,6 +175,54 @@
               <p>Web Accessibility</p>
             </li>
           </ul>
+
+          <!-- alt theme skills -->
+          <table class="skills__table">
+            <tr>
+              <td>
+                <i class="fab fa-html5" aria-hidden="true"></i>
+                <p>HTML5</p>
+              </td>
+              <td>
+                <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                <p>CSS3</p>
+              </td>
+              <td>
+                <i class="fab fa-sass" aria-hidden="true"></i>
+                <p>Sass</p>
+              </td>
+              <td>
+                <i class="fab fa-js" aria-hidden="true"></i>
+                <p>JavaScript</p>
+              </td>
+              <td>
+                <i class="devicon-jquery-plain" aria-hidden="true"></i>
+                <p>jQuery</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fab fa-react" aria-hidden="true"></i>
+                <p>React</p>
+              </td>
+              <td>
+                <span class="firebase-icon" aria-hidden="true"></span>
+                <p>Firebase</p>
+              </td>
+              <td>
+                <i class="devicon-photoshop-plain" aria-hidden="true"></i>
+                <p>Adobe Photoshop</p>
+              </td>
+              <td>
+                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                <p>Responsive Design</p>
+              </td>
+              <td>
+                <i class="fas fa-universal-access" aria-hidden="true"></i>
+                <p>Web Accessibility</p>
+              </td>
+            </tr>
+          </table>
         </div>
       </section>
       <!-- /skills section -->
@@ -482,12 +495,25 @@
             <h3>Get In Touch</h3>
             <p>
               Thank you for visiting my site!
+              <img
+                src="./assets/alt/thanks-blinkie.gif"
+                class="alt-img"
+                aria-hidden="true"
+              />
             </p>
             <p>
               If you'd like to chat about my work, feel free to reach out. I'd
               love to hear from you!
             </p>
-            <p>My email: <strong>yiyingzou@gmail.com</strong></p>
+            <p>
+              My email:
+              <img
+                src="./assets/alt/email.gif"
+                aria-hidden="true"
+                class="alt-img"
+              />
+              <strong>yiyingzou@gmail.com</strong>
+            </p>
             <p class="sr-only">
               Find me on social media! All links open in a new tab.
             </p>
@@ -562,6 +588,14 @@
 
     <footer>
       <div class="wrapper">
+        <div class="alt-img blinkies" aria-hidden="true">
+          <img src="./assets/alt/blinkies.gif" />
+          <img src="./assets/alt/chocolate-blinkie.gif" />
+          <img src="./assets/alt/crayons-blinkie.gif" />
+          <img src="./assets/alt/strawberry-blinkie.gif" />
+          <img src="./assets/alt/tea-blinkie.gif" />
+        </div>
+
         <p>
           &copy; 2020 Yiying Zou. Photo by
           <a href="http://fgueye.com" target="_blank" rel="noopener noreferrer"

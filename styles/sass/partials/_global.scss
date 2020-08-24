@@ -3,14 +3,21 @@ html {
   font-size: 62.5%;
 }
 
-:root[data-theme="main"] ul,
-:root[data-theme="main"] li {
+ul,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-:root[data-theme="main"] body {
+:root[data-theme="alt"] ul,
+:root[data-theme="alt"] li {
+  list-style: unset; //REDO ALL THESE -- check default values
+  margin: initial;
+  padding: initial;
+}
+
+body {
   background-color: $white;
   font-family: $bodyFont;
   font-size: 2rem;
@@ -32,6 +39,16 @@ html {
   }
 }
 
+:root[data-theme="alt"] .wrapper {
+  max-width: none;
+  width: auto;
+  margin: 0;
+
+  @media (max-width: 600px) {
+    width: auto;
+  }
+}
+
 h1,
 h3,
 h4 {
@@ -40,24 +57,32 @@ h4 {
 }
 
 :root[data-theme="alt"] h1 {
-  font-family: $altFont-2;
+  font-family: $bodyFont-alt;
+  text-decoration: underline;
+  border-bottom: 10px dotted $white;
+  text-transform: none;
 }
 
-:root[data-theme="alt"] h3,
-:root[data-theme="alt"] h4 {
+:root[data-theme="alt"] h3 {
   text-transform: lowercase;
   font-family: $bodyFont-alt;
 }
 
+// section title
 h3 {
   font-size: 3.5rem;
 }
 
+// project title
 h4 {
   position: relative;
   display: inline-block;
   font-size: 3rem;
   margin: 20px 0;
+}
+
+:root[data-theme="alt"] h4 {
+  font-family: $altFont;
 }
 
 h4::after {
@@ -79,6 +104,12 @@ h4::after {
   align-items: center;
 }
 
+:root[data-theme="alt"] .flex-container {
+  @media (max-width: 769px) {
+    display: inline-block;
+  }
+}
+
 a {
   color: $primaryColor;
   text-decoration: none;
@@ -87,6 +118,20 @@ a {
   &:hover,
   &:focus {
     color: $secondaryColor;
+  }
+}
+
+:root[data-theme="alt"] a {
+  color: $pink;
+  border-bottom: 1px dashed $pink;
+  cursor: crosshair;
+
+  &:hover,
+  &:focus {
+    border-bottom: 0;
+    color: $gold;
+    border-top: 1px dashed $gold;
+    font-weight: bold;
   }
 }
 
@@ -107,4 +152,12 @@ a {
   font-family: $bodyFont;
   text-transform: none;
   font-weight: normal;
+}
+
+.alt-img {
+  display: none;
+}
+
+:root[data-theme="alt"] .alt-img {
+  display: inline-block;
 }

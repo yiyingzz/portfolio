@@ -212,14 +212,21 @@ html {
   font-size: 62.5%;
 }
 
-:root[data-theme="main"] ul,
-:root[data-theme="main"] li {
+ul,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-:root[data-theme="main"] body {
+:root[data-theme="alt"] ul,
+:root[data-theme="alt"] li {
+  list-style: unset;
+  margin: initial;
+  padding: initial;
+}
+
+body {
   background-color: #fff;
   font-family: "Muli", sans-serif;
   font-size: 2rem;
@@ -243,6 +250,18 @@ html {
   }
 }
 
+:root[data-theme="alt"] .wrapper {
+  max-width: none;
+  width: auto;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  :root[data-theme="alt"] .wrapper {
+    width: auto;
+  }
+}
+
 h1,
 h3,
 h4 {
@@ -251,11 +270,13 @@ h4 {
 }
 
 :root[data-theme="alt"] h1 {
-  font-family: "Lucida Console", cursive;
+  font-family: "Comic Sans", cursive;
+  text-decoration: underline;
+  border-bottom: 10px dotted #fff;
+  text-transform: none;
 }
 
-:root[data-theme="alt"] h3,
-:root[data-theme="alt"] h4 {
+:root[data-theme="alt"] h3 {
   text-transform: lowercase;
   font-family: "Comic Sans", cursive;
 }
@@ -269,6 +290,10 @@ h4 {
   display: inline-block;
   font-size: 3rem;
   margin: 20px 0;
+}
+
+:root[data-theme="alt"] h4 {
+  font-family: "Impact", serif;
 }
 
 h4::after {
@@ -297,6 +322,12 @@ h4::after {
           align-items: center;
 }
 
+@media (max-width: 769px) {
+  :root[data-theme="alt"] .flex-container {
+    display: inline-block;
+  }
+}
+
 a {
   color: #cc076e;
   text-decoration: none;
@@ -306,6 +337,19 @@ a {
 
 a:hover, a:focus {
   color: #62239a;
+}
+
+:root[data-theme="alt"] a {
+  color: #cc076e;
+  border-bottom: 1px dashed #cc076e;
+  cursor: crosshair;
+}
+
+:root[data-theme="alt"] a:hover, :root[data-theme="alt"] a:focus {
+  border-bottom: 0;
+  color: gold;
+  border-top: 1px dashed gold;
+  font-weight: bold;
 }
 
 .sr-only-show-focus:focus,
@@ -326,6 +370,14 @@ a:hover, a:focus {
   font-family: "Muli", sans-serif;
   text-transform: none;
   font-weight: normal;
+}
+
+.alt-img {
+  display: none;
+}
+
+:root[data-theme="alt"] .alt-img {
+  display: inline-block;
 }
 
 header {
@@ -470,7 +522,8 @@ h2 {
 }
 
 :root[data-theme="alt"] h2 {
-  font-family: "Courier New", monospace;
+  font-family: "Impact", serif;
+  text-transform: none;
 }
 
 .nav__toggle {
@@ -489,12 +542,21 @@ h2 {
   cursor: pointer;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 769px) {
   .nav__toggle {
     top: 15px;
     right: 15px;
     width: 50px;
     height: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav__toggle {
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
   }
 }
 
@@ -509,9 +571,16 @@ h2 {
   top: 1px;
 }
 
+@media (max-width: 769px) {
+  .nav__toggle i {
+    font-size: 2.4rem;
+  }
+}
+
 @media (max-width: 500px) {
   .nav__toggle i {
-    font-size: 2.7rem;
+    font-size: 2rem;
+    top: 0;
   }
 }
 
@@ -529,7 +598,7 @@ nav {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   background: #fdf4b4;
-  font-family: "Muli", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.8rem;
@@ -657,6 +726,10 @@ nav ul li {
   }
 }
 
+:root[data-theme="alt"] .about {
+  background-image: url(../assets/alt/cherryblossompattern.gif);
+}
+
 .about__info {
   width: calc(55% - 20px);
 }
@@ -669,6 +742,24 @@ nav ul li {
 
 .about__info span {
   color: #62239a;
+}
+
+:root[data-theme="alt"] .about__info {
+  width: 640px;
+  font-family: "Verdana", sans-serif;
+  color: #24bebb;
+  margin-left: 50px;
+  z-index: 1;
+}
+
+@media (max-width: 769px) {
+  :root[data-theme="alt"] .about__info {
+    width: 640px;
+  }
+}
+
+:root[data-theme="alt"] .about__info span {
+  color: #e60073;
 }
 
 .about__img {
@@ -713,6 +804,20 @@ nav ul li {
   }
 }
 
+:root[data-theme="alt"] .about__img img {
+  width: 300px;
+  height: 500px;
+}
+
+@media (max-width: 769px) {
+  :root[data-theme="alt"] .about__img img {
+    width: 300px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .about__img::after {
   content: "";
   display: block;
@@ -725,6 +830,12 @@ nav ul li {
   z-index: -1;
 }
 
+:root[data-theme="alt"] .about__img::after {
+  width: 1030px;
+  left: -700px;
+  bottom: -35px;
+}
+
 .skills {
   margin-top: 50px;
   padding-top: 20px;
@@ -733,61 +844,12 @@ nav ul li {
 }
 
 :root[data-theme="alt"] .skills {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 50px;
   background-image: url(../assets/alt/bubble-pattern.gif);
-  cursor: help;
-}
-
-:root[data-theme="alt"] .skills__table {
-  border: 10px outset #fff;
-  width: 95%;
-  margin: 0 auto;
-}
-
-:root[data-theme="alt"] .skills__table tr {
-  border: 2px solid #000;
-}
-
-:root[data-theme="alt"] .skills__table td {
-  border: 2px solid #000;
-  -webkit-box-shadow: inset 0 0 0 1px #fff;
-          box-shadow: inset 0 0 0 1px #fff;
-  padding: 10px;
-  font-size: 2rem;
-  color: deepskyblue;
-}
-
-:root[data-theme="alt"] .skills__table td i {
-  font-size: 6rem;
-  color: #fff;
-}
-
-:root[data-theme="alt"] .skills__table td .fa-html5,
-:root[data-theme="alt"] .skills__table td .devicon-jquery-plain,
-:root[data-theme="alt"] .skills__table td .devicon-photoshop-plain {
-  color: #cc076e;
-}
-
-:root[data-theme="alt"] .skills__table td .fa-js,
-:root[data-theme="alt"] .skills__table td .fa-react {
-  color: #24bebb;
-}
-
-:root[data-theme="alt"] .skills__table td .firebase-icon {
-  background-image: url(../assets/icons/firebase.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: block;
-  width: 100%;
-  height: 60px;
-  -webkit-filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
-          filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
-}
-
-:root[data-theme="alt"] .skills__table td p {
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  font-family: "Impact", serif;
-  text-transform: none;
+  cursor: sw-resize;
+  text-align: right;
 }
 
 :root[data-theme="main"] .skills__title {
@@ -849,19 +911,70 @@ nav ul li {
 }
 
 :root[data-theme="alt"] .skills__title {
-  font-size: calc(17rem - 2vw);
+  font-size: 16rem;
   color: #cc076e;
   text-shadow: -10px -10px 0 deepskyblue;
   color: gold;
+  margin: 0;
 }
 
-.skills__icons {
-  position: relative;
-  top: -50px;
-}
-
-:root[data-theme="alt"] .skills__icons {
+.skills__table {
   display: none;
+}
+
+:root[data-theme="alt"] .skills__table {
+  display: table;
+  border: 10px outset #fff;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+:root[data-theme="alt"] .skills__table tr {
+  border: 2px solid #000;
+}
+
+:root[data-theme="alt"] .skills__table td {
+  border: 2px solid #000;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+          box-shadow: inset 0 0 0 1px #fff;
+  padding: 10px;
+  font-size: 2rem;
+  color: deepskyblue;
+}
+
+:root[data-theme="alt"] .skills__table td i {
+  font-size: 6rem;
+  color: #fff;
+}
+
+:root[data-theme="alt"] .skills__table td .fa-html5,
+:root[data-theme="alt"] .skills__table td .devicon-jquery-plain,
+:root[data-theme="alt"] .skills__table td .devicon-photoshop-plain {
+  color: #cc076e;
+}
+
+:root[data-theme="alt"] .skills__table td .fa-js,
+:root[data-theme="alt"] .skills__table td .fa-react {
+  color: #24bebb;
+}
+
+:root[data-theme="alt"] .skills__table td .firebase-icon {
+  background-image: url(../assets/icons/firebase.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  width: 100%;
+  height: 60px;
+  -webkit-filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
+          filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
+}
+
+:root[data-theme="alt"] .skills__table td p {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  font-family: "Impact", serif;
+  text-transform: none;
 }
 
 .skills__bg {
@@ -879,6 +992,11 @@ nav ul li {
   left: 0;
   right: 0;
   z-index: -1;
+}
+
+.skills__icons {
+  position: relative;
+  top: -50px;
 }
 
 @media (max-width: 440px) {
@@ -942,7 +1060,7 @@ nav ul li {
           justify-content: center;
 }
 
-.skills__icons .firebase-icon {
+.skills__icons .skills__firebase .firebase-icon {
   background-image: url(../assets/icons/firebase.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -952,14 +1070,18 @@ nav ul li {
   height: 60px;
 }
 
-.skills__icons .firebase-icon:hover, .skills__icons .firebase-icon:focus {
+.skills__icons .skills__firebase .firebase-icon:hover, .skills__icons .skills__firebase .firebase-icon:focus {
   -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2482%) hue-rotate(354deg) brightness(109%) contrast(98%);
           filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2482%) hue-rotate(354deg) brightness(109%) contrast(98%);
 }
 
-.skills__icons .firebase-icon:hover + p,
-.skills__icons .firebase-icon:focus + p {
+.skills__icons .skills__firebase .firebase-icon:hover + p,
+.skills__icons .skills__firebase .firebase-icon:focus + p {
   color: #fdf4b4;
+}
+
+:root[data-theme="alt"] .skills__icons {
+  display: none;
 }
 
 .work {
@@ -974,19 +1096,7 @@ nav ul li {
 :root[data-theme="alt"] .work {
   background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
   background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
-  color: #fff;
-  font-family: "Lucida Console", cursive;
-}
-
-:root[data-theme="alt"] .work a {
-  cursor: crosshair;
-  font-family: "Courier New", monospace;
-}
-
-:root[data-theme="alt"] .work a:hover, :root[data-theme="alt"] .work a:focus {
-  border: 1px dashed #24bebb;
-  background-color: #e60073;
-  color: gold;
+  background-image: url(../assets/alt/flowers-pattern.gif);
 }
 
 .work__project {
@@ -1142,11 +1252,11 @@ nav ul li {
 }
 
 :root[data-theme="alt"] .contact {
-  background-image: url(../assets/alt/butterfly-pattern.png);
+  background-image: url(../assets/alt/stars.gif);
 }
 
 :root[data-theme="alt"] .contact h3 {
-  font-family: "Courier New", monospace;
+  font-family: "Impact", serif;
 }
 
 .contact__info {
@@ -1293,4 +1403,8 @@ footer {
   font-size: 1.6rem;
   text-align: center;
   padding: 10px;
+}
+
+:root[data-theme="alt"] footer .blinkies img {
+  margin: 0 5px;
 }

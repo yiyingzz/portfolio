@@ -18,20 +18,7 @@
     indigo,
     violet
   );
-  color: $white;
-  font-family: $altFont-2;
-
-  a {
-    cursor: crosshair;
-    font-family: $altFont-3;
-
-    &:hover,
-    &:focus {
-      border: 1px dashed $turquoise;
-      background-color: $alt-pink;
-      color: $gold;
-    }
-  }
+  background-image: url(../assets/alt/flowers-pattern.gif);
 }
 
 // PROJECTS

@@ -11,6 +11,10 @@
   }
 }
 
+:root[data-theme="alt"] .about {
+  background-image: url(../assets/alt/cherryblossompattern.gif);
+}
+
 .about__info {
   width: calc(55% - 20px);
 
@@ -20,6 +24,22 @@
 
   span {
     color: $secondaryColor;
+  }
+}
+
+:root[data-theme="alt"] .about__info {
+  width: 640px;
+  font-family: $headerFont-alt;
+  color: $turquoise;
+  margin-left: 50px;
+  z-index: 1;
+
+  @media (max-width: 769px) {
+    width: 640px;
+  }
+
+  span {
+    color: $alt-pink;
   }
 }
 
@@ -53,6 +73,18 @@
   }
 }
 
+:root[data-theme="alt"] .about__img {
+  img {
+    width: 300px;
+    height: 500px;
+
+    @media (max-width: 769px) {
+      width: 300px;
+      order: 1;
+    }
+  }
+}
+
 .about__img::after {
   content: "";
   display: block;
@@ -63,4 +95,10 @@
   left: 40px;
   bottom: 40px;
   z-index: -1;
+}
+
+:root[data-theme="alt"] .about__img::after {
+  width: 1030px;
+  left: -700px;
+  bottom: -35px;
 }
