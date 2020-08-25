@@ -12,7 +12,7 @@ li {
 
 :root[data-theme="alt"] ul,
 :root[data-theme="alt"] li {
-  list-style: unset; //REDO ALL THESE -- check default values
+  list-style: disc outside none;
   margin: initial;
   padding: initial;
 }
@@ -120,6 +120,7 @@ a {
   color: $pink;
   border-bottom: 1px dashed $pink;
   cursor: crosshair;
+  transition: none;
 
   &:hover,
   &:focus {
@@ -147,6 +148,10 @@ a {
   font-family: $bodyFont;
   text-transform: none;
   font-weight: normal;
+}
+
+:root[data-theme="alt"] .default-content {
+  display: none;
 }
 
 .alt-content {

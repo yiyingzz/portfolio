@@ -26,3 +26,24 @@ $primaryColor: $pink;
 $secondaryColor: $darkBlue;
 $tertiaryColor: $turquoise;
 $accentColor: $yellow;
+
+// MIXIN
+
+@mixin altButtonStyle {
+  font-family: $altFont;
+  background-color: #bbb;
+  border: 4px outset #ddd;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  position: static;
+  transition: none;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    border: 4px outset #ddd;
+    font-weight: normal;
+    color: black;
+  }
+}

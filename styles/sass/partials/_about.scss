@@ -14,6 +14,12 @@
 :root[data-theme="alt"] .about {
   background-image: url(../assets/alt/cherryblossompattern.gif);
   flex-wrap: nowrap;
+
+  h3 {
+    @media (max-width: 600px) {
+      text-align: left;
+    }
+  }
 }
 
 .about__info {

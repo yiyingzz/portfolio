@@ -221,7 +221,7 @@ li {
 
 :root[data-theme="alt"] ul,
 :root[data-theme="alt"] li {
-  list-style: unset;
+  list-style: disc outside none;
   margin: initial;
   padding: initial;
 }
@@ -338,6 +338,8 @@ a:hover, a:focus {
   color: #cc076e;
   border-bottom: 1px dashed #cc076e;
   cursor: crosshair;
+  -webkit-transition: none;
+  transition: none;
 }
 
 :root[data-theme="alt"] a:hover, :root[data-theme="alt"] a:focus {
@@ -365,6 +367,10 @@ a:hover, a:focus {
   font-family: "Muli", sans-serif;
   text-transform: none;
   font-weight: normal;
+}
+
+:root[data-theme="alt"] .default-content {
+  display: none;
 }
 
 .alt-content {
@@ -725,6 +731,12 @@ nav ul li {
   background-image: url(../assets/alt/cherryblossompattern.gif);
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+@media (max-width: 600px) {
+  :root[data-theme="alt"] .about h3 {
+    text-align: left;
+  }
 }
 
 .about__info {
@@ -1205,6 +1217,18 @@ nav ul li {
   }
 }
 
+:root[data-theme="alt"] .work__project__skills {
+  list-style: disc outside none;
+  padding-left: 30px;
+}
+
+:root[data-theme="alt"] .work__project__skills li {
+  display: block;
+  list-style: disc outside none;
+  padding-left: 30px;
+  background: none;
+}
+
 .work__link {
   display: inline-block;
   background-color: #cc076e;
@@ -1230,6 +1254,26 @@ nav ul li {
           box-shadow: none;
   top: 5px;
   left: 5px;
+}
+
+:root[data-theme="alt"] .work__link {
+  font-family: "Impact", serif;
+  background-color: #bbb;
+  border: 4px outset #ddd;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  position: static;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+:root[data-theme="alt"] .work__link:hover, :root[data-theme="alt"] .work__link:focus {
+  border: 4px outset #ddd;
+  font-weight: normal;
+  color: black;
 }
 
 .work__divider {
@@ -1259,6 +1303,12 @@ nav ul li {
 
 :root[data-theme="alt"] .contact {
   background-image: url(../assets/alt/stars.gif);
+  background-size: initial;
+  text-align: center;
+}
+
+:root[data-theme="alt"] .contact .wrapper {
+  display: block;
 }
 
 :root[data-theme="alt"] .contact h3 {
@@ -1283,6 +1333,10 @@ nav ul li {
   .contact__info {
     text-align: center;
   }
+}
+
+:root[data-theme="alt"] .contact__info {
+  width: 100%;
 }
 
 .contact__social {
@@ -1343,6 +1397,56 @@ nav ul li {
   }
 }
 
+:root[data-theme="alt"] .contact__social {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+:root[data-theme="alt"] .contact__social li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+:root[data-theme="alt"] .contact__social i {
+  font-size: 3rem;
+}
+
+@media (max-width: 890px) {
+  :root[data-theme="alt"] .contact__social i {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 769px) {
+  :root[data-theme="alt"] .contact__social i {
+    font-size: 3rem;
+  }
+}
+
+:root[data-theme="alt"] .contact__social a {
+  font-family: "Impact", serif;
+  background-color: #bbb;
+  border: 4px outset #ddd;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  position: static;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 38px;
+  height: 38px;
+}
+
+:root[data-theme="alt"] .contact__social a:hover, :root[data-theme="alt"] .contact__social a:focus {
+  border: 4px outset #ddd;
+  font-weight: normal;
+  color: black;
+}
+
 form {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -1391,6 +1495,32 @@ form button:hover, form button:focus {
   }
 }
 
+:root[data-theme="alt"] form {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+:root[data-theme="alt"] form button {
+  font-family: "Impact", serif;
+  background-color: #bbb;
+  border: 4px outset #ddd;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  position: static;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+:root[data-theme="alt"] form button:hover, :root[data-theme="alt"] form button:focus {
+  border: 4px outset #ddd;
+  font-weight: normal;
+  color: black;
+}
+
 input,
 textarea {
   width: 100%;
@@ -1405,10 +1535,31 @@ textarea:focus {
   border: 3px solid #cc076e;
 }
 
+:root[data-theme="alt"] input,
+:root[data-theme="alt"] textarea {
+  padding: 0;
+  margin: 5px 0;
+  border: 0;
+  font-family: "Verdana", sans-serif;
+  font-size: 1.4rem;
+}
+
+:root[data-theme="alt"] input:hover, :root[data-theme="alt"] input:focus,
+:root[data-theme="alt"] textarea:hover,
+:root[data-theme="alt"] textarea:focus {
+  border: 0;
+}
+
 footer {
   font-size: 1.6rem;
   text-align: center;
   padding: 10px;
+}
+
+:root[data-theme="alt"] footer {
+  padding: 20px 0 0 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
 
 :root[data-theme="alt"] footer p:last-of-type {

@@ -63,9 +63,12 @@
           <div class="scroll-down" tabindex="0" role="button">
             <span class="sr-only">Scroll to next section</span>
             <i
-              class="fas fa-chevron-circle-down scroll-down__icon slide-bottom"
+              class="default-content fas fa-chevron-circle-down scroll-down__icon slide-bottom"
               aria-hidden="true"
             ></i>
+          </div>
+          <div class="alt-content">
+            You are visitor #<img src="./assets/alt/counter.gif" alt="666" />
           </div>
         </div>
       </div>
@@ -244,7 +247,11 @@
                 <img src="assets/portfolio_img/gif-movie.png" alt="" />
               </div>
               <div class="work__info aos-init aos-animate" data-aos="fade-left">
-                <img src="assets/lines.jpg" alt="" />
+                <img
+                  src="assets/lines.jpg"
+                  aria-hidden="true"
+                  class="default-content"
+                />
                 <h4>Gif Me a Movie.</h4>
                 <p>
                   No time to watch a movie? Get 3 gifs summarizing a film title
@@ -296,8 +303,8 @@
                   ><span class="sr-only">View on</span> Github
                 </a>
               </div>
-              <div class="work__divider">
-                <img src="assets/lines.jpg" alt="" />
+              <div class="work__divider" aria-hidden="true">
+                <img src="assets/lines.jpg" class="default-content" />
               </div>
             </li>
 
@@ -312,7 +319,11 @@
                 class="work__info aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <img src="assets/lines.jpg" alt="" />
+                <img
+                  src="assets/lines.jpg"
+                  aria-hidden="true"
+                  class="default-content"
+                />
                 <h4>Yiying Yells (Gently).</h4>
                 <p>
                   My version of Simon Says-- hence, Yiying Yells-- a game to
@@ -342,8 +353,8 @@
                   ><span class="sr-only">View on</span> Github
                 </a>
               </div>
-              <div class="work__divider">
-                <img src="assets/lines.jpg" alt="" />
+              <div class="work__divider" aria-hidden="true">
+                <img src="assets/lines.jpg" class="default-content" />
               </div>
             </li>
 
@@ -355,7 +366,11 @@
                 <img src="assets/portfolio_img/going-dutch.png" alt="" />
               </div>
               <div class="work__info aos-init aos-animate" data-aos="fade-left">
-                <img src="assets/lines.jpg" alt="" />
+                <img
+                  src="assets/lines.jpg"
+                  aria-hidden="true"
+                  class="default-content"
+                />
                 <h4>Going Dutch.</h4>
                 <p>
                   An app for splitting bills between multiple people and stores
@@ -385,8 +400,8 @@
                   ><span class="sr-only">View on</span> Github</a
                 >
               </div>
-              <div class="work__divider">
-                <img src="assets/lines.jpg" alt="" />
+              <div class="work__divider" aria-hidden="true">
+                <img src="assets/lines.jpg" class="default-content" />
               </div>
             </li>
 
@@ -401,7 +416,11 @@
                 class="work__info aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <img src="assets/lines.jpg" alt="" />
+                <img
+                  src="assets/lines.jpg"
+                  aria-hidden="true"
+                  class="default-content"
+                />
                 <h4>Charmer.</h4>
                 <p>
                   A date-planning app that lets you search for a recipe and a
@@ -443,8 +462,8 @@
                   ><span class="sr-only">View on</span> Github</a
                 >
               </div>
-              <div class="work__divider">
-                <img src="assets/lines.jpg" alt="" />
+              <div class="work__divider" aria-hidden="true">
+                <img src="assets/lines.jpg" class="default-content" />
               </div>
             </li>
 
@@ -456,7 +475,11 @@
                 <img src="assets/portfolio_img/textilee.png" alt="" />
               </div>
               <div class="work__info aos-init aos-animate" data-aos="fade-left">
-                <img src="assets/lines.jpg" alt="" />
+                <img
+                  src="assets/lines.jpg"
+                  aria-hidden="true"
+                  class="default-content"
+                />
                 <h4>Textilee.</h4>
                 <p>
                   A fully responsive multi-page PSD conversion for a textiles
@@ -493,22 +516,30 @@
       <section id="contact" class="contact">
         <div class="wrapper flex-container">
           <div class="contact__info aos-init aos-animate" data-aos="fade-right">
-            <img src="assets/lines-yellow.png" alt="" />
+            <img
+              src="assets/lines-yellow.png"
+              aria-hidden="true"
+              class="default-content"
+            />
             <h3>Get In Touch</h3>
+            <div class="alt-content" aria-hidden="true">
+              <img src="./assets/alt/line.gif" />
+            </div>
             <p>
-              Thank you for visiting my site!
-              <img
-                src="./assets/alt/thanks-blinkie.gif"
-                class="alt-content"
-                aria-hidden="true"
-              />
+              <span class="default-content"
+                >Thank you for visiting my site!</span
+              >
+              <span class="alt-content">
+                <img src="./assets/alt/thanks-blinkie.gif" aria-hidden="true" />
+                for visiting my site!
+              </span>
             </p>
             <p>
               If you'd like to chat about my work, feel free to reach out. I'd
               love to hear from you!
             </p>
             <p>
-              My email:
+              <span class="default-content">My email:</span>
               <img
                 src="./assets/alt/email.gif"
                 aria-hidden="true"
@@ -559,6 +590,9 @@
               </li>
             </ul>
           </div>
+          <div class="alt-content" aria-hidden="true">
+            <img src="./assets/alt/line.gif" />
+          </div>
           <h4 class="sr-only">Contact form</h4>
           <form
             action="https://formspree.io/myykgvoa"
@@ -597,7 +631,6 @@
           <img src="./assets/alt/strawberry-blinkie.gif" />
           <img src="./assets/alt/tea-blinkie.gif" />
         </div>
-
         <p>
           &copy; 2020 Yiying Zou. Photo by
           <a href="http://fgueye.com" target="_blank" rel="noopener noreferrer"

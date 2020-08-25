@@ -8,6 +8,12 @@
 
 :root[data-theme="alt"] .contact {
   background-image: url(../assets/alt/stars.gif);
+  background-size: initial;
+  text-align: center;
+
+  .wrapper {
+    display: block;
+  }
 
   h3 {
     font-family: $altFont;
@@ -28,6 +34,10 @@
   @media (max-width: 480px) {
     text-align: center;
   }
+}
+
+:root[data-theme="alt"] .contact__info {
+  width: 100%;
 }
 
 .contact__social {
@@ -77,6 +87,34 @@
   }
 }
 
+:root[data-theme="alt"] .contact__social {
+  justify-content: center;
+  margin-bottom: 30px;
+
+  li {
+    list-style: none;
+    margin: 0 20px;
+  }
+
+  i {
+    font-size: 3rem;
+
+    @media (max-width: 890px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 769px) {
+      font-size: 3rem;
+    }
+  }
+
+  a {
+    @include altButtonStyle;
+    width: 38px;
+    height: 38px;
+  }
+}
+
 form {
   align-self: flex-start;
   width: calc(60% - 20px);
@@ -119,6 +157,16 @@ form {
   }
 }
 
+:root[data-theme="alt"] form {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  button {
+    @include altButtonStyle;
+  }
+}
+
 input,
 textarea {
   width: 100%;
@@ -129,5 +177,19 @@ textarea {
   &:hover,
   &:focus {
     border: 3px solid $primaryColor;
+  }
+}
+
+:root[data-theme="alt"] input,
+:root[data-theme="alt"] textarea {
+  padding: 0;
+  margin: 5px 0;
+  border: 0;
+  font-family: $headerFont-alt;
+  font-size: 1.4rem;
+
+  &:hover,
+  &:focus {
+    border: 0;
   }
 }

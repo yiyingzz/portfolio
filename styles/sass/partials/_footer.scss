@@ -5,6 +5,18 @@ footer {
 }
 
 :root[data-theme="alt"] footer {
+  padding: 20px 0 0 0;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+
   p:last-of-type {
     margin-top: 0;
   }

@@ -104,6 +104,18 @@
   }
 }
 
+:root[data-theme="alt"] .work__project__skills {
+  list-style: disc outside none;
+  padding-left: 30px;
+
+  li {
+    display: block;
+    list-style: disc outside none;
+    padding-left: 30px;
+    background: none;
+  }
+}
+
 .work__link {
   display: inline-block;
   background-color: $primaryColor;
@@ -127,6 +139,10 @@
     top: 5px;
     left: 5px;
   }
+}
+
+:root[data-theme="alt"] .work__link {
+  @include altButtonStyle;
 }
 
 .work__divider {
