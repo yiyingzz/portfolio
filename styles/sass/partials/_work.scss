@@ -18,7 +18,14 @@
     indigo,
     violet
   );
-  background-image: url(../assets/alt/flowers-pattern.gif);
+
+  background-image: linear-gradient(
+    to bottom,
+    mistyrose,
+    lavender,
+    honeydew,
+    paleturquoise
+  );
 }
 
 // PROJECTS

@@ -14,6 +14,7 @@
 :root[data-theme="alt"] .about {
   background-image: url(../assets/alt/cherryblossompattern.gif);
   flex-wrap: nowrap;
+  justify-content: flex-start;
 
   h3 {
     @media (max-width: 600px) {
@@ -39,7 +40,8 @@
   min-width: 640px;
   font-family: $headerFont-alt;
   color: $turquoise;
-  margin-left: 50px;
+  margin-left: 120px;
+  margin-right: 10px;
   z-index: 1;
 
   @media (max-width: 769px) {

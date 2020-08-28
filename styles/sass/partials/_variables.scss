@@ -46,4 +46,8 @@ $accentColor: $yellow;
     font-weight: normal;
     color: black;
   }
+
+  &:active {
+    border: 4px inset #ddd;
+  }
 }

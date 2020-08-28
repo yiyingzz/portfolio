@@ -10,6 +10,22 @@ header {
   }
 }
 
+:root[data-theme="alt"] header {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../assets/alt/rainbow.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: initial;
+
+  @media (max-width: 1023px) {
+    background-position: initial;
+  }
+}
+
 .header__content {
   height: 100vh;
   align-items: center;
@@ -21,6 +37,16 @@ header {
 
   @media (max-width: 600px) {
     height: 400px;
+  }
+}
+
+:root[data-theme="alt"] .header__content {
+  @media (max-width: 1023px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 600px) {
+    height: 100vh;
   }
 }
 
@@ -166,6 +192,10 @@ h2 {
   }
 }
 
+:root[data-theme="alt"] .nav__toggle {
+  display: none;
+}
+
 .nav-visible {
   display: block;
 }
@@ -198,6 +228,17 @@ nav {
   }
 }
 
+:root[data-theme="alt"] nav {
+  display: block;
+  width: 400px;
+  height: auto;
+
+  position: absolute;
+  left: 800px;
+  right: 0;
+  background: transparent;
+}
+
 nav ul {
   text-align: center;
   justify-content: center;
@@ -217,6 +258,14 @@ nav ul {
   li {
     width: 100%;
     position: relative;
+  }
+}
+
+:root[data-theme="alt"] nav ul {
+  font-size: 1.6rem;
+
+  a {
+    background-color: gold;
   }
 }
 
