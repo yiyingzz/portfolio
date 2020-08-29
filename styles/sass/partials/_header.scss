@@ -232,11 +232,21 @@ nav {
   display: block;
   width: 400px;
   height: auto;
+  flex-wrap: nowrap;
+  font-family: $altFont;
+  text-transform: none;
 
   position: absolute;
-  left: 800px;
+  left: 50%;
   right: 0;
+  bottom: 50px;
+  transform: translateX(-50%);
+
   background: transparent;
+
+  .nav__close {
+    display: none;
+  }
 }
 
 nav ul {
@@ -251,21 +261,30 @@ nav ul {
     padding: 50px 30px;
   }
 
-  a {
-    padding: 20px 40px;
-  }
-
   li {
     width: 100%;
     position: relative;
   }
+
+  a {
+    padding: 20px 40px;
+  }
 }
 
 :root[data-theme="alt"] nav ul {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  padding: 0;
+  height: auto;
+  list-style: none;
 
   a {
-    background-color: gold;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    padding: 20px 0;
+    width: auto;
   }
 }
 
@@ -335,4 +354,11 @@ nav ul {
     -webkit-transform: translateY(0);
     transform: translateY(50px);
   }
+}
+
+:root[data-theme="alt"] .alt-content__visitor {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
 }

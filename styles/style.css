@@ -650,10 +650,21 @@ nav.closed {
   display: block;
   width: 400px;
   height: auto;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-family: "Impact", serif;
+  text-transform: none;
   position: absolute;
-  left: 800px;
+  left: 50%;
   right: 0;
+  bottom: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: transparent;
+}
+
+:root[data-theme="alt"] nav .nav__close {
+  display: none;
 }
 
 nav ul {
@@ -673,21 +684,30 @@ nav ul {
   }
 }
 
-nav ul a {
-  padding: 20px 40px;
-}
-
 nav ul li {
   width: 100%;
   position: relative;
 }
 
+nav ul a {
+  padding: 20px 40px;
+}
+
 :root[data-theme="alt"] nav ul {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  padding: 0;
+  height: auto;
+  list-style: none;
 }
 
 :root[data-theme="alt"] nav ul a {
-  background-color: gold;
+  padding: 0;
+}
+
+:root[data-theme="alt"] nav ul li {
+  list-style: none;
+  padding: 20px 0;
+  width: auto;
 }
 
 .nav__close:focus,
@@ -756,6 +776,14 @@ nav ul li {
     -webkit-transform: translateY(0);
     transform: translateY(50px);
   }
+}
+
+:root[data-theme="alt"] .alt-content__visitor {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .about {
