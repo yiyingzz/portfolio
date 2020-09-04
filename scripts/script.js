@@ -49,14 +49,13 @@ portfolio.init = () => {
     console.log($("html"));
     if (!$("html").attr("data-theme")) {
       $("html").attr("data-theme", "alt");
-      AOS.init({ disable: true });
+      AOS.init({ disable: true }); // this removes all the css classes and data-aos attribut so you can't re-init b/c classes aren't there anymore :(
+      console.log(AOS.init);
     } else {
       $("html").removeAttr("data-theme");
-      AOS.init({
-        disable: false
-      });
-      console.log("else, disable false");
-      console.log(AOS);
+      // if I want to re-init AOS, have to add the classes & attr back in here >_<
+      $("li").addClass("aos-animate").attr("data-aos", "fade-up");
+      AOS.init({ disable: "phone" });
     }
   });
 };
