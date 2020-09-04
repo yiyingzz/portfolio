@@ -41,6 +41,24 @@ portfolio.init = () => {
       $(".nav__toggle")[0].focus();
     }
   });
+
+  // toggle theme
+  $(".theme-toggle").on("click", function () {
+    // put z-index back on about__img::after cuz for some reason disabling AOS sets it to -1
+    console.log(document.documentElement);
+    console.log($("html"));
+    if (!$("html").attr("data-theme")) {
+      $("html").attr("data-theme", "alt");
+      AOS.init({ disable: true });
+    } else {
+      $("html").removeAttr("data-theme");
+      AOS.init({
+        disable: false
+      });
+      console.log("else, disable false");
+      console.log(AOS);
+    }
+  });
 };
 
 portfolio.openMenu = function () {

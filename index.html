@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="alt">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +24,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body>
+  <body id="top">
     <a href="#main" class="sr-only sr-only-show-focus">Skip to main content</a>
     <header>
       <button class="nav__toggle" aria-expanded="false">
@@ -55,7 +55,7 @@
             <span class="hi">Hi,</span> I'm Yiying<span
               class="period"
               aria-hidden="true"
-              >.</span
+              ><a href="javascript:void(0)" class="theme-toggle">.</a></span
             >
           </h1>
           <h2>Front End Developer</h2>
@@ -657,6 +657,7 @@
           Alt theme additional images from: 1 2 3 4 5 6 7
         </p>
       </div>
+      <a href="#top" class="alt-content back-to-top">Back to Top</a>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

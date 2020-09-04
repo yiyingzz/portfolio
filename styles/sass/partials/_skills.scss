@@ -92,17 +92,22 @@
     i {
       font-size: 6rem;
       color: $white;
+      cursor: se-resize;
     }
 
     .fa-html5,
+    .fa-sass,
     .devicon-jquery-plain,
-    .devicon-photoshop-plain {
+    .fa-mobile-alt {
       color: $pink;
     }
 
+    .fa-css3-alt,
     .fa-js,
-    .fa-react {
-      color: $turquoise;
+    .fa-react,
+    .devicon-photoshop-plain,
+    .fa-universal-access {
+      color: $mediumBlue;
     }
 
     .firebase-icon {
@@ -113,8 +118,9 @@
       display: block;
       width: 100%;
       height: 60px;
-      filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%)
-        hue-rotate(78deg) brightness(92%) contrast(90%);
+      filter: brightness(0) saturate(100%) invert(12%) sepia(60%)
+        saturate(6222%) hue-rotate(318deg) brightness(108%) contrast(102%);
+      cursor: se-resize;
     }
 
     p {

@@ -1044,17 +1044,22 @@ nav ul a {
 :root[data-theme="alt"] .skills__table-container td i {
   font-size: 6rem;
   color: #fff;
+  cursor: se-resize;
 }
 
 :root[data-theme="alt"] .skills__table-container td .fa-html5,
+:root[data-theme="alt"] .skills__table-container td .fa-sass,
 :root[data-theme="alt"] .skills__table-container td .devicon-jquery-plain,
-:root[data-theme="alt"] .skills__table-container td .devicon-photoshop-plain {
+:root[data-theme="alt"] .skills__table-container td .fa-mobile-alt {
   color: #cc076e;
 }
 
+:root[data-theme="alt"] .skills__table-container td .fa-css3-alt,
 :root[data-theme="alt"] .skills__table-container td .fa-js,
-:root[data-theme="alt"] .skills__table-container td .fa-react {
-  color: #24bebb;
+:root[data-theme="alt"] .skills__table-container td .fa-react,
+:root[data-theme="alt"] .skills__table-container td .devicon-photoshop-plain,
+:root[data-theme="alt"] .skills__table-container td .fa-universal-access {
+  color: deepskyblue;
 }
 
 :root[data-theme="alt"] .skills__table-container td .firebase-icon {
@@ -1065,8 +1070,9 @@ nav ul a {
   display: block;
   width: 100%;
   height: 60px;
-  -webkit-filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
-          filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(620%) hue-rotate(78deg) brightness(92%) contrast(90%);
+  -webkit-filter: brightness(0) saturate(100%) invert(12%) sepia(60%) saturate(6222%) hue-rotate(318deg) brightness(108%) contrast(102%);
+          filter: brightness(0) saturate(100%) invert(12%) sepia(60%) saturate(6222%) hue-rotate(318deg) brightness(108%) contrast(102%);
+  cursor: se-resize;
 }
 
 :root[data-theme="alt"] .skills__table-container td p {
