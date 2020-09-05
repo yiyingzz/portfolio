@@ -42,12 +42,10 @@ portfolio.init = () => {
     }
   });
 
-  // toggle theme
   $(".theme-toggle").on("click", function () {
     if (!$("html").attr("data-theme")) {
       $("html").attr("data-theme", "alt");
-      AOS.init({ disable: true }); // this removes all the css classes and data-aos attribut so you can't re-init b/c classes aren't there anymore :(
-      console.log(AOS.init);
+      AOS.init({ disable: true });
     } else {
       $("html").removeAttr("data-theme");
       portfolio.reAddAOS();
@@ -57,8 +55,18 @@ portfolio.init = () => {
 };
 
 portfolio.reAddAOS = function () {
-  // add all classes & attr back for AOS
-  $("li").addClass("aos-animate").attr("data-aos", "fade-up");
+  $(".skills__icons li").addClass("aos-animate").attr("data-aos", "fade-up");
+  $("#work h3").addClass("aos-animate").attr("data-aos", "fade-down");
+  $(
+    ".about__info, .work__project-left .work__images, .work__project-right .work__info, .contact__info"
+  )
+    .addClass("aos-animate")
+    .attr("data-aos", "fade-right");
+  $(
+    ".about__img, .work__project-left .work__info, .work__project-right .work__images, form"
+  )
+    .addClass("aos-animate")
+    .attr("data-aos", "fade-left");
 };
 
 portfolio.openMenu = function () {
