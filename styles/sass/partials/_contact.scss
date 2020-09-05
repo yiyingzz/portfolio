@@ -8,6 +8,7 @@
 
 :root[data-theme="alt"] .contact {
   background-image: url(../assets/alt/stars.gif);
+  background-attachment: fixed;
   background-size: initial;
   text-align: center;
 
@@ -164,6 +165,12 @@ form {
 
   button {
     @include altButtonStyle;
+
+    @media (max-width: 480px) {
+      width: initial;
+      position: relative;
+      left: 0;
+    }
   }
 }
 

@@ -6,17 +6,10 @@ footer {
 
 :root[data-theme="alt"] footer {
   padding: 20px 0 0 0;
-  background-image: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
-  background-image: url(../assets/alt/flowers-pattern.gif);
+  background-color: deepskyblue;
+  background-image: url(../assets/alt/rainbow.jpg);
+  background-position: center center;
+  position: relative;
 
   p:last-of-type {
     margin-top: 0;
@@ -27,4 +20,12 @@ footer {
       margin: 0 5px;
     }
   }
+}
+
+:root[data-theme="alt"] .back-to-top {
+  @include altButtonStyle;
+  padding: 5px 10px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
 }

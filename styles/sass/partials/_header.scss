@@ -43,10 +43,12 @@ header {
 :root[data-theme="alt"] .header__content {
   @media (max-width: 1023px) {
     height: 100vh;
+    height: 800px;
   }
 
   @media (max-width: 600px) {
     height: 100vh;
+    height: 800px;
   }
 }
 
@@ -92,6 +94,20 @@ h1 {
   }
 }
 
+:root[data-theme="alt"] h1 {
+  @media (max-width: 769px) {
+    font-size: 12rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 12rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 12rem;
+  }
+}
+
 .hi {
   font-size: 6rem;
   line-height: 0.7;
@@ -118,6 +134,9 @@ h1 {
   }
 }
 
+:root[data-theme="alt"] .hi {
+}
+
 .period {
   color: $primaryColor;
 }
@@ -138,6 +157,15 @@ h2 {
 :root[data-theme="alt"] h2 {
   font-family: $altFont;
   text-transform: none;
+  padding-top: 20px;
+
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 3rem;
+  }
 }
 
 // NAVIGATION MENU
@@ -361,4 +389,9 @@ nav ul {
   bottom: 200px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: 530px) {
+    bottom: 130px;
+    width: 300px;
+  }
 }

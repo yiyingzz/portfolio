@@ -44,20 +44,21 @@ portfolio.init = () => {
 
   // toggle theme
   $(".theme-toggle").on("click", function () {
-    // put z-index back on about__img::after cuz for some reason disabling AOS sets it to -1
-    console.log(document.documentElement);
-    console.log($("html"));
     if (!$("html").attr("data-theme")) {
       $("html").attr("data-theme", "alt");
       AOS.init({ disable: true }); // this removes all the css classes and data-aos attribut so you can't re-init b/c classes aren't there anymore :(
       console.log(AOS.init);
     } else {
       $("html").removeAttr("data-theme");
-      // if I want to re-init AOS, have to add the classes & attr back in here >_<
-      $("li").addClass("aos-animate").attr("data-aos", "fade-up");
+      portfolio.reAddAOS();
       AOS.init({ disable: "phone" });
     }
   });
+};
+
+portfolio.reAddAOS = function () {
+  // add all classes & attr back for AOS
+  $("li").addClass("aos-animate").attr("data-aos", "fade-up");
 };
 
 portfolio.openMenu = function () {
