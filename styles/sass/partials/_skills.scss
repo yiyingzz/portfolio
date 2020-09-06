@@ -89,6 +89,7 @@
     padding: 10px;
     font-size: 2rem;
     color: $mediumBlue;
+    position: relative;
 
     i {
       font-size: 6rem;
@@ -130,6 +131,15 @@
         0 0 70px $alt-pink;
       font-family: $altFont;
       text-transform: none;
+    }
+
+    .alt-content__cross {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: help;
     }
   }
 }

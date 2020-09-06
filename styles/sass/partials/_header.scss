@@ -135,9 +135,6 @@ h1 {
   }
 }
 
-:root[data-theme="alt"] .hi {
-}
-
 .period {
   color: $primaryColor;
 }
@@ -387,12 +384,27 @@ nav ul {
 
 :root[data-theme="alt"] .alt-content__visitor {
   position: absolute;
-  bottom: 200px;
+  width: 300px;
+  bottom: 180px;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
 
   @media (max-width: 530px) {
     bottom: 130px;
-    width: 300px;
+  }
+
+  span {
+    display: block;
+    font-size: 1.1rem;
+  }
+}
+
+:root[data-theme="alt"] .theme-toggle {
+  border-bottom: 0;
+
+  &:hover,
+  &:focus {
+    border-top: 0;
   }
 }

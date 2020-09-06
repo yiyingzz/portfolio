@@ -814,17 +814,31 @@ nav ul a {
 
 :root[data-theme="alt"] .alt-content__visitor {
   position: absolute;
-  bottom: 200px;
+  width: 300px;
+  bottom: 180px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  text-align: center;
 }
 
 @media (max-width: 530px) {
   :root[data-theme="alt"] .alt-content__visitor {
     bottom: 130px;
-    width: 300px;
   }
+}
+
+:root[data-theme="alt"] .alt-content__visitor span {
+  display: block;
+  font-size: 1.1rem;
+}
+
+:root[data-theme="alt"] .theme-toggle {
+  border-bottom: 0;
+}
+
+:root[data-theme="alt"] .theme-toggle:hover, :root[data-theme="alt"] .theme-toggle:focus {
+  border-top: 0;
 }
 
 .about {
@@ -1094,6 +1108,7 @@ nav ul a {
   padding: 10px;
   font-size: 2rem;
   color: deepskyblue;
+  position: relative;
 }
 
 :root[data-theme="alt"] .skills__table-container td i {
@@ -1134,6 +1149,15 @@ nav ul a {
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   font-family: "Impact", serif;
   text-transform: none;
+}
+
+:root[data-theme="alt"] .skills__table-container td .alt-content__cross {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: help;
 }
 
 .skills__bg {
@@ -1369,6 +1393,7 @@ nav ul a {
   list-style: disc outside none;
   padding-left: 30px;
   background: none;
+  font-family: "Verdana", sans-serif;
 }
 
 .work__link {
