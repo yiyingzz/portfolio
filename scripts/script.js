@@ -46,7 +46,6 @@ portfolio.init = () => {
     if (!$("html").attr("data-theme")) {
       $("html").attr("data-theme", "alt");
       AOS.init({ disable: true });
-      //animate(); // cometCursor
       new fairyDustCursor({
         colors: [
           "#ff0000",

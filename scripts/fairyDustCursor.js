@@ -173,6 +173,3 @@ function fairyDustCursor(options) {
 
   init();
 }
-
-//works by creating a canvas
-// can we stop it by removing the canvas?
