@@ -46,12 +46,23 @@ portfolio.init = () => {
     if (!$("html").attr("data-theme")) {
       $("html").attr("data-theme", "alt");
       AOS.init({ disable: true });
-      animate(); // cometCursor
-      // new fairyDustCursor();
+      //animate(); // cometCursor
+      new fairyDustCursor({
+        colors: [
+          "#ff0000",
+          "#00ff00",
+          "#0000ff",
+          "#ffffff",
+          "#ff00ff",
+          "#ffff00",
+          "#00ffff"
+        ]
+      });
     } else {
       $("html").removeAttr("data-theme");
       portfolio.reAddAOS();
       AOS.init({ disable: "phone" });
+      $("canvas").remove(); // removes fairyDustCursor
     }
   });
 };

@@ -110,3 +110,6 @@ function animate() {
 }
 
 // -->
+
+// works by creating 10 divs at the bottom of the page with position: absolute, which changes based on your mouse movements -- looks like they also "blink"/overlap with eachotehr when your mouse doesn't move --> looks like it's made by rotating through the colours
+// can prob create a function to stop it

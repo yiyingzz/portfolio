@@ -2,7 +2,7 @@ function fairyDustCursor(options) {
   let possibleColors = (options && options.colors) || [
     "#D61C59",
     "#E7D84B",
-    "#1B8798",
+    "#1B8798"
   ];
   let hasWrapperEl = options && options.element;
   let element = hasWrapperEl || document.body;
@@ -14,10 +14,9 @@ function fairyDustCursor(options) {
   let canvas, context;
 
   let canvImages = [];
-  const char = "*";
+  const char = "■";
 
   function init() {
-    
     canvas = document.createElement("canvas");
     context = canvas.getContext("2d");
     canvas.style.top = "0px";
@@ -52,7 +51,7 @@ function fairyDustCursor(options) {
 
       bgContext.fillStyle = color;
       bgContext.textAlign = "center";
-      bgContext.font = "21px serif";
+      bgContext.font = "10px serif";
       bgContext.textBaseline = "middle";
       bgContext.fillText(
         char,
@@ -148,7 +147,7 @@ function fairyDustCursor(options) {
     this.lifeSpan = lifeSpan; //ms
     this.velocity = {
       x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
-      y: Math.random() * 0.7 + 0.9,
+      y: Math.random() * 0.7 + 0.9
     };
     this.position = { x: x, y: y };
     this.canv = canvasItem;
@@ -174,3 +173,6 @@ function fairyDustCursor(options) {
 
   init();
 }
+
+//works by creating a canvas
+// can we stop it by removing the canvas?
